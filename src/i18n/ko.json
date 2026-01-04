@@ -61,6 +61,7 @@
     "roam": { "h1": "방랑", "h2": "길 위에서 사람과 세계의 진정한 연결을 느끼기" }
   },
   "navigation": {
+    "home": "홈",
     "build": "창업",
     "invest": "투자",
     "life": "인생"
@@ -87,7 +88,7 @@
     "back": "뒤로",
     "next": "다음",
     "previous": "이전",
-    "readMore": "더 보기",
+    "readMore": "전체 보기",
     "pagination": {
       "totalPosts": "총 {count} 개의 게시물",
       "totalPostsWithLang": "{lang} 총 {count} 개의 게시물",
@@ -110,7 +111,7 @@
   "homepage": {
     "featuredPosts": "추천 게시물",
     "topArticles": "인기 게시물",
-    "latestArticles": "최신 게시물"
+    "latestArticles": "최신 뉴스"
   },
   "notFound": {
     "title": "페이지를 찾을 수 없습니다",

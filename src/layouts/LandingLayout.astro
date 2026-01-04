@@ -13,6 +13,8 @@ interface Props {
   canonical?: string;
   noindex?: boolean;
   centered?: boolean;
+  showHeader?: boolean;
+  mainClass?: string;
 }
 
 const {
@@ -25,6 +27,8 @@ const {
   canonical,
   noindex,
   centered = true,
+  showHeader = true,
+  mainClass,
 } = Astro.props as Props;
 const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
   (langProp as Lang | undefined) ??
@@ -42,18 +46,18 @@ const headerProps = {
 };
 ---
 
-<MainLayout lang={resolvedLang}>
+<MainLayout lang={resolvedLang} mainClass={mainClass}>
   <BaseHeader {...headerProps} slot="head" />
   {
-    (title || description || hasHeaderSlot) && (
-      <section class={`mb-6 ${centered ? 'text-center' : ''}`}>
+    showHeader && (title || description || hasHeaderSlot) && (
+      <section class={`mb-6 md:mb-8 ${centered ? 'text-center' : 'text-left'}`}>
         {hasHeaderSlot ? (
           <slot name="header" />
         ) : (
           <div>
-            {title && <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>}
+            {title && <h1 class="text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h1>}
             {description && (
-              <p class="mt-2 text-neutral-600 dark:text-neutral-300">{description}</p>
+              <p class="mt-2 text-base-content/80">{description}</p>
             )}
           </div>
         )}

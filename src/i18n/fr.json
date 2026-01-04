@@ -94,6 +94,7 @@
     }
   },
   "navigation": {
+    "home": "Accueil",
     "build": "Construire",
     "invest": "Investir",
     "life": "Vie"
@@ -120,7 +121,7 @@
     "back": "Retour",
     "next": "Suivant",
     "previous": "Précédent",
-    "readMore": "Lire la suite",
+    "readMore": "Tout voir",
     "pagination": {
       "totalPosts": "{count} articles au total",
       "totalPostsWithLang": "{lang} {count} articles au total",
@@ -143,7 +144,7 @@
   "homepage": {
     "featuredPosts": "Articles en vedette",
     "topArticles": "Articles populaires",
-    "latestArticles": "Derniers articles"
+    "latestArticles": "Dernières nouvelles"
   },
   "notFound": {
     "title": "Page non trouvée",

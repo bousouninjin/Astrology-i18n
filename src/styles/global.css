@@ -1,22 +1,79 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-html {
-  text-autospace: normal;
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+  root: ":root";
+  logs: false;
 }
 
-body {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+@custom-variant dark (&:where(.dark, .dark *, [data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-sans: "Source Sans Pro", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Source Serif 4 Variable", ui-serif, Georgia, Cambria,
+    "Times New Roman", Times, serif;
+
+  --breakpoint-2xl: initial;
+}
+
+@layer base {
+  :root {
+    @apply cursor-default;
+  }
+
+  html {
+    @apply h-full text-[16px];
+    text-autospace: normal;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      @apply text-[17px];
+    }
+  }
+
+  body {
+    @apply font-sans antialiased h-full bg-base-100 text-base-content;
+  }
+
+  h1,
+  h2 {
+    @apply font-serif;
+  }
+
+  small,
+  time {
+    @apply text-sm;
+  }
+
+  .prose {
+    pre {
+      code {
+        span,
+        p {
+          @apply break-all;
+        }
+      }
+    }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (max-width: 640px) {
+    max-width: none;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1248px;
+  }
+}
+
+@layer components {
+  .a-01 {
+    @apply hover:underline decoration-primary;
+  }
 }
 
 .skeleton {

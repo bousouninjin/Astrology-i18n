@@ -61,6 +61,7 @@
     "roam": { "h1": "行走", "h2": "在路上，感受人与世界的真实连接" }
   },
   "navigation": {
+    "home": "首页",
     "build": "创业",
     "invest": "投资",
     "life": "生活"
@@ -87,7 +88,7 @@
     "back": "返回",
     "next": "下一页",
     "previous": "上一页",
-    "readMore": "阅读更多",
+    "readMore": "查看全部",
     "pagination": {
       "totalPosts": "共 {count} 篇文章",
       "totalPostsWithLang": "{lang}共 {count} 篇文章",
@@ -110,7 +111,7 @@
   "homepage": {
     "featuredPosts": "精选文章",
     "topArticles": "热门文章",
-    "latestArticles": "最新文章"
+    "latestArticles": "最新新闻"
   },
   "notFound": {
     "title": "页面未找到",

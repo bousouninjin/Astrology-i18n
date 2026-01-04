@@ -91,6 +91,7 @@
     }
   },
   "navigation": {
+    "home": "Beranda",
     "build": "Membangun",
     "invest": "Investasi",
     "life": "Kehidupan"
@@ -117,7 +118,7 @@
     "back": "Kembali",
     "next": "Selanjutnya",
     "previous": "Sebelumnya",
-    "readMore": "Baca Selengkapnya",
+    "readMore": "Lihat semua",
     "pagination": {
       "totalPosts": "{count} artikel total",
       "totalPostsWithLang": "{lang} {count} artikel total",
@@ -140,7 +141,7 @@
   "homepage": {
     "featuredPosts": "Artikel Unggulan",
     "topArticles": "Artikel Populer",
-    "latestArticles": "Artikel Terbaru"
+    "latestArticles": "Berita Terbaru"
   },
   "notFound": {
     "title": "Halaman Tidak Ditemukan",

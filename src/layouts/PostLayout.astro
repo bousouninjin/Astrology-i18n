@@ -2,12 +2,15 @@
 import MainLayout from '@/layouts/MainLayout.astro';
 import BaseHeader from '@/ui/BaseHeader.astro';
 import Prose from '@/features/Prose.astro';
+import OptimizedPicture from '@/features/OptimizedPicture.astro';
+import Share from '@/features/Share.astro';
 import { Image } from 'astro:assets';
 import authorAvatar from '@/assets/author.avif';
 import type { Lang } from '@/utils/i18n';
 import { t, categoryLabel as i18nCategoryLabel, categorySlug } from '@/utils/translations';
 import { formatDate } from '@/utils/date';
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
   lang?: Lang;
@@ -46,6 +49,8 @@ const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
   'zh') as Lang;
 
 const fmt = (d?: string | Date) => formatDate(d, resolvedLang);
+const showModified =
+  !!modifiedTime && String(modifiedTime) !== String(publishedTime ?? '');
 
 const categoryLabel = i18nCategoryLabel(resolvedLang, section);
 const categoryKey = categorySlug(resolvedLang, section);
@@ -68,11 +73,86 @@ const headerProps = {
 
 <MainLayout lang={resolvedLang}>
   <BaseHeader {...headerProps} slot="head" />
-  <Prose>
-    <header class="mb-6">
-      <h1 class="mb-3 text-center text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>
-    </header>
-  </Prose>
+  <section class="mb-8 flex flex-col border-b border-base-300 pb-4 pt-0 lg:flex-col-reverse lg:border-none lg:pt-6">
+    {
+      image && (
+        <div class="mx-auto w-full max-w-5xl overflow-hidden lg:rounded-md">
+          <div class="aspect-[20/9] w-full overflow-hidden">
+            <OptimizedPicture
+              src={image}
+              alt={imageAlt || title}
+              priority
+              layout="full-width"
+              fit="cover"
+              position="center"
+              rounded={false}
+              class="h-full w-full object-cover"
+              sizes="(max-width: 1024px) 100vw, 1024px"
+            />
+          </div>
+        </div>
+      )
+    }
+    {section && categoryLabel && (
+      <div class="mx-auto my-4 flex w-full max-w-5xl items-center gap-2 text-sm text-base-content/70 lg:hidden">
+        <Icon name="lucide:bookmark-plus" class="h-4 w-4" />
+        <a
+          href={getRelativeLocaleUrl(resolvedLang, `/category/${encodeURIComponent(categoryKey ?? '')}`)}
+          class="a-01 font-semibold"
+        >
+          {categoryLabel}
+        </a>
+      </div>
+    )}
+    <div class="mx-auto w-full max-w-5xl">
+      <h1 class="text-left text-3xl font-bold text-pretty lg:text-4xl">{title}</h1>
+      <div class="mt-2 flex flex-col items-start gap-4 text-sm lg:mt-6">
+        {(section || publishedTime) && (
+          <div class="flex flex-wrap items-center gap-2 text-base-content/70">
+            {section && categoryLabel && (
+              <span class="hidden items-center gap-1 lg:flex">
+                <Icon name="lucide:bookmark-plus" class="h-4 w-4" />
+                <a
+                  href={getRelativeLocaleUrl(
+                    resolvedLang,
+                    `/category/${encodeURIComponent(categoryKey ?? '')}`,
+                  )}
+                  class="a-01 font-semibold"
+                >
+                  {categoryLabel}
+                </a>
+              </span>
+            )}
+            {section && publishedTime && (
+              <div class="divider divider-horizontal mx-2 h-4" aria-hidden="true" />
+            )}
+            {publishedTime && (
+              <span class="flex items-center gap-1">
+                <Icon name="lucide:calendar" class="h-4 w-4" />
+                <time datetime={new Date(publishedTime).toISOString()}>
+                  {fmt(publishedTime)}
+                </time>
+              </span>
+            )}
+          </div>
+        )}
+        <div class="flex w-full flex-wrap items-center justify-between gap-3">
+          {author ? (
+            <a
+              href={getRelativeLocaleUrl(resolvedLang, '/author/')}
+              class="flex items-center gap-2 text-sm text-neutral-600 no-underline transition-opacity hover:opacity-80 dark:text-neutral-300"
+            >
+              <Image src={authorAvatar} alt={author} width={32} height={32} class="rounded-full" />
+              <span class="font-semibold">{author}</span>
+            </a>
+          ) : (
+            <span />
+          )}
+          <Share lang={resolvedLang} title={title} />
+        </div>
+      </div>
+    </div>
+  </section>
 
   {
     Astro.props.noProse ? (
@@ -80,58 +160,10 @@ const headerProps = {
     ) : (
       <Prose>
         <slot />
-        {(publishedTime || modifiedTime) && (
+        {showModified && (
           <p class="mt-6 text-xs text-neutral-500 dark:text-neutral-400">
-            {publishedTime && (
-              <>
-                {t(resolvedLang, 'post.publishedAt')}: {fmt(publishedTime)}
-              </>
-            )}
-            {publishedTime && modifiedTime && ' · '}
-            {modifiedTime && (
-              <>
-                {t(resolvedLang, 'post.modifiedAt')}: {fmt(modifiedTime)}
-              </>
-            )}
+            {t(resolvedLang, 'post.modifiedAt')}: {fmt(modifiedTime)}
           </p>
-        )}
-        {(section || author) && (
-          <div class="mt-2 flex items-center justify-between">
-            {author ? (
-              <a
-                href={getRelativeLocaleUrl(resolvedLang, '/author/')}
-                class="flex items-center gap-3 text-xs text-neutral-600 no-underline transition-opacity hover:opacity-80 dark:text-neutral-300"
-              >
-                <Image
-                  src={authorAvatar}
-                  alt={author}
-                  width={32}
-                  height={32}
-                  class="rounded-full"
-                />
-                <span>{author}</span>
-              </a>
-            ) : (
-              <span />
-            )}
-            <div class="flex items-center gap-2">
-              {section ? (
-                <a
-                  href={getRelativeLocaleUrl(
-                    resolvedLang,
-                    `/category/${encodeURIComponent(categoryKey ?? '')}`,
-                  )}
-                  class="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-700 no-underline hover:bg-neutral-200 hover:no-underline focus:no-underline dark:bg-neutral-800 dark:text-neutral-300"
-                  aria-label={`Category: ${categoryLabel}`}
-                >
-                  {categoryLabel}
-                </a>
-              ) : (
-                <span />
-              )}
-              {/** Views removed */}
-            </div>
-          </div>
         )}
       </Prose>
     )

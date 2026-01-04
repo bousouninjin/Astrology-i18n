@@ -88,6 +88,7 @@
     "roam": { "h1": "Бродить", "h2": "В пути ощущать подлинную связь между людьми и миром" }
   },
   "navigation": {
+    "home": "Главная",
     "build": "Строить",
     "invest": "Инвестировать",
     "life": "Жизнь"
@@ -114,7 +115,7 @@
     "back": "Назад",
     "next": "Следующая",
     "previous": "Предыдущая",
-    "readMore": "Читать далее",
+    "readMore": "Смотреть все",
     "pagination": {
       "totalPosts": "Всего {count} статей",
       "totalPostsWithLang": "{lang} Всего {count} статей",
@@ -137,7 +138,7 @@
   "homepage": {
     "featuredPosts": "Избранные статьи",
     "topArticles": "Популярные статьи",
-    "latestArticles": "Последние статьи"
+    "latestArticles": "Последние новости"
   },
   "notFound": {
     "title": "Страница не найдена",

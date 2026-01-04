@@ -1,0 +1,119 @@
+---
+import type { Lang } from '@/utils/i18n';
+import { t } from '@/utils/translations';
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  lang?: Lang;
+  title?: string;
+  class?: string;
+}
+
+const { lang, title, class: className } = Astro.props as Props;
+const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
+  (lang as Lang | undefined) ??
+  'zh') as Lang;
+
+const shareUrl = Astro.url.href;
+const encodedUrl = encodeURIComponent(shareUrl);
+const encodedTitle = encodeURIComponent(title ?? '');
+
+const shareItems = [
+  {
+    key: 'copy',
+    label: t(resolvedLang, 'share.copy'),
+    icon: 'lucide:link',
+    type: 'button',
+  },
+  {
+    key: 'x',
+    label: t(resolvedLang, 'share.x'),
+    icon: 'lucide:twitter',
+    href: `https://x.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    type: 'link',
+  },
+  {
+    key: 'facebook',
+    label: t(resolvedLang, 'share.facebook'),
+    icon: 'lucide:facebook',
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    type: 'link',
+  },
+  {
+    key: 'linkedin',
+    label: t(resolvedLang, 'share.linkedin'),
+    icon: 'lucide:linkedin',
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    type: 'link',
+  },
+] as const;
+
+const baseClass =
+  'inline-flex h-12 w-12 items-center justify-center rounded-xl bg-base-200 text-base-content/70 transition duration-200 hover:text-base-content hover:shadow active:scale-95';
+---
+
+<div class={`flex gap-2 ${className ?? ''}`.trim()}>
+  {
+    shareItems.map((item) =>
+      item.type === 'button' ? (
+        <button
+          type="button"
+          class={baseClass}
+          aria-label={item.label}
+          title={item.label}
+          data-share-copy
+          data-share-url={shareUrl}
+        >
+          <Icon name={item.icon} class="h-5 w-5" />
+        </button>
+      ) : (
+        <a
+          href={item.href}
+          class={baseClass}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={item.label}
+          title={item.label}
+        >
+          <Icon name={item.icon} class="h-5 w-5" />
+        </a>
+      ),
+    )
+  }
+</div>
+
+<script>
+  import { registerPageInit } from '@/utils/page-init';
+
+  function initShareButtons() {
+    const buttons = document.querySelectorAll('[data-share-copy]');
+    if (!buttons.length) return;
+
+    const handleCopy = async (event) => {
+      const button = event.currentTarget;
+      if (!(button instanceof HTMLElement)) return;
+      const url = button.getAttribute('data-share-url') || window.location.href;
+
+      try {
+        await navigator.clipboard.writeText(url);
+        button.classList.add('text-success');
+        window.setTimeout(() => button.classList.remove('text-success'), 1200);
+      } catch (error) {
+        window.open(url, '_blank', 'noopener');
+      }
+    };
+
+    buttons.forEach((button) => {
+      button.removeEventListener('click', handleCopy);
+      button.addEventListener('click', handleCopy);
+    });
+
+    return () => {
+      buttons.forEach((button) => {
+        button.removeEventListener('click', handleCopy);
+      });
+    };
+  }
+
+  registerPageInit('shareButtons', initShareButtons);
+</script>

@@ -49,10 +49,13 @@ const pictureFormats: Array<'avif'> = ['avif'];
 
 const isRemote = typeof src === 'string' && /^(https?:)?\/\/.*/.test(src);
 
-const shouldInfer = inferSize ?? isRemote;
+const shouldInfer = inferSize ?? false;
 
-const roundedForImg = rounded ? 'rounded-lg' : '';
-const roundedForPicture = rounded ? 'rounded-lg overflow-hidden' : '';
+const hasRoundedClass = typeof className === 'string' && /\brounded(?:-[^\s]+)?\b/.test(className);
+const roundedForImg = rounded && !hasRoundedClass ? 'rounded-md' : '';
+const roundedForPicture = rounded
+  ? [hasRoundedClass ? '' : 'rounded-md', 'overflow-hidden'].filter(Boolean).join(' ')
+  : '';
 const imgClass = [className, roundedForImg].filter(Boolean).join(' ');
 const pictureClass = [className, roundedForPicture].filter(Boolean).join(' ');
 
@@ -94,7 +97,7 @@ const basePictureProps = {
 ---
 
 {
-  isRemote && !shouldInfer ? (
+  isRemote ? (
     <img
       src={src}
       alt={alt}
@@ -103,6 +106,8 @@ const basePictureProps = {
       fetchpriority={resolvedFetchpriority}
       decoding={resolvedDecoding}
       {...(sizes ? { sizes } : {})}
+      {...(typeof width === 'number' ? { width } : {})}
+      {...(typeof height === 'number' ? { height } : {})}
     />
   ) : asPicture ? (
     shouldInfer ? (

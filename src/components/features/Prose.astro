@@ -11,11 +11,14 @@ const resolvedLang = ((Astro.currentLocale as string | undefined) ??
   'zh') as Lang;
 const isCJK = ['zh', 'ja', 'ko'].includes(resolvedLang);
 const containerClass = [
-  'prose dark:prose-invert mx-auto',
+  'prose md:prose-lg mx-auto dark:prose-invert',
+  'prose-img:border prose-img:mx-auto prose-img:border-base-200 prose-img:rounded-md',
+  'prose-p:break-words prose-a:break-all prose-pre:break-words prose-pre:cursor-text',
+  'prose-code:break-words prose-code:whitespace-pre-wrap',
   isCJK ? 'prose-p:text-justify prose-li:text-justify' : 'prose-p:text-left prose-li:text-left',
 ].join(' ');
 ---
 
-<div class={containerClass}>
+<div class={containerClass} data-pagefind-body>
   <slot />
 </div>

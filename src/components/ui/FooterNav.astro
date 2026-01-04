@@ -14,14 +14,14 @@ const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
   'zh') as Lang;
 ---
 
-<div class={`md:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-6 ${className ?? ''}`.trim()}>
+<div class={`grid grid-cols-2 gap-6 sm:grid-cols-4 ${className ?? ''}`.trim()}>
   {
     NAV_ITEMS.map((item) => (
       <div>
-        <h3 class="mb-2 text-sm font-medium text-neutral-900 dark:text-neutral-100">
+        <h3 class="mb-2 text-sm font-semibold">
           <a
             href={getRelativeLocaleUrl(resolvedLang, `/category/${item.key}`)}
-            class="no-underline hover:no-underline focus:no-underline"
+            class="link link-hover"
           >
             {t(resolvedLang, `navigation.${item.key}`)}
           </a>
@@ -31,7 +31,7 @@ const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
             <li>
               <a
                 href={getRelativeLocaleUrl(resolvedLang, `/tags/${tag}`)}
-                class="text-sm text-neutral-600 no-underline hover:text-neutral-900 hover:no-underline focus:no-underline dark:text-neutral-300 dark:hover:text-white"
+                class="link link-hover text-sm"
               >
                 {t(resolvedLang, `tags.${tag}`)}
               </a>
@@ -43,14 +43,14 @@ const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
   }
 
   <div>
-    <h3 class="mb-2 text-sm font-medium text-neutral-900 dark:text-neutral-100">
+    <h3 class="mb-2 text-sm font-semibold">
       {t(resolvedLang, 'footer.more')}
     </h3>
     <ul class="space-y-1">
       <li>
         <a
           href={getRelativeLocaleUrl(resolvedLang, '/category')}
-          class="text-sm text-neutral-600 no-underline hover:text-neutral-900 hover:no-underline focus:no-underline dark:text-neutral-300 dark:hover:text-white"
+          class="link link-hover text-sm"
         >
           {t(resolvedLang, 'footer.categories')}
         </a>
@@ -58,7 +58,7 @@ const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
       <li>
         <a
           href={getRelativeLocaleUrl(resolvedLang, '/tags')}
-          class="text-sm text-neutral-600 no-underline hover:text-neutral-900 hover:no-underline focus:no-underline dark:text-neutral-300 dark:hover:text-white"
+          class="link link-hover text-sm"
         >
           {t(resolvedLang, 'footer.tags')}
         </a>
@@ -66,7 +66,7 @@ const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
       <li>
         <a
           href={getRelativeLocaleUrl(resolvedLang, '/author')}
-          class="text-sm text-neutral-600 no-underline hover:text-neutral-900 hover:no-underline focus:no-underline dark:text-neutral-300 dark:hover:text-white"
+          class="link link-hover text-sm"
         >
           {t(resolvedLang, 'footer.author')}
         </a>

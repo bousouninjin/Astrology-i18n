@@ -10,7 +10,7 @@ const { aspectClass = 'aspect-[16/9]', class: className = '' } = Astro.props as 
 ---
 
 <div
-  class={`relative overflow-hidden rounded-xl ${aspectClass} ${className}`.trim()}
+  class={`relative overflow-hidden rounded-md ${aspectClass} ${className}`.trim()}
   aria-label="加载中..."
 >
   <Skeleton variant="image" class="absolute inset-0 h-full w-full" rounded={false} />

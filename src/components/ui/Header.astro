@@ -15,47 +15,45 @@ const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
 const siteName = t(resolvedLang, 'site.name');
 ---
 
-<header class="w-full bg-white dark:bg-neutral-950">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="grid h-14 grid-cols-[1fr_auto_1fr] items-center gap-3">
-      <a
-        href={getRelativeLocaleUrl(resolvedLang, '/')}
-        class="flex items-center gap-2 justify-self-start text-xl font-semibold tracking-tight text-neutral-900 hover:opacity-90 dark:text-neutral-100"
+<header class="relative z-50 border-b border-base-300">
+  <div class="navbar container">
+    <div class="navbar-start gap-2 lg:w-1/2">
+      <button
+        type="button"
+        class="btn btn-ghost btn-circle lg:hidden"
+        aria-label="Menu"
+        data-mobile-trigger
       >
-        <span
-          class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-xl text-transparent"
-        >
-          {siteName}
-        </span>
+        <Icon name="lucide:menu" />
+      </button>
+      <a href={getRelativeLocaleUrl(resolvedLang, '/')} class="text-xl font-semibold lg:hidden">
+        {siteName}
       </a>
+    </div>
 
-      <div class="justify-self-center">
-        <MainNav lang={resolvedLang} />
-      </div>
+    <div class="navbar-center hidden lg:flex">
+      <a href={getRelativeLocaleUrl(resolvedLang, '/')} class="text-xl font-semibold">
+        {siteName}
+      </a>
+    </div>
 
-      <div class="flex items-center gap-2 justify-self-end">
-        <a
-          href={getRelativeLocaleUrl(resolvedLang, '/search')}
-          aria-label="Search"
-          title={t(resolvedLang, 'search.title')}
-          class="rounded-md p-2 text-neutral-600 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
-        >
-          <Icon name="lucide:search" />
-        </a>
+    <div class="navbar-end gap-1">
+      <ThemeSwitcher lang={resolvedLang} />
+      <a
+        href={getRelativeLocaleUrl(resolvedLang, '/search')}
+        aria-label="Search"
+        title={t(resolvedLang, 'search.title')}
+        class="btn btn-ghost btn-circle"
+      >
+        <Icon name="lucide:search" />
+      </a>
+      <LanguageSwitcher lang={resolvedLang} />
+    </div>
+  </div>
 
-        <LanguageSwitcher lang={resolvedLang} />
-
-        <ThemeSwitcher lang={resolvedLang} />
-
-        <button
-          type="button"
-          class="rounded-md p-2 text-neutral-700 hover:bg-neutral-100 lg:hidden dark:text-neutral-300 dark:hover:bg-neutral-800"
-          aria-label="Menu"
-          data-mobile-trigger
-        >
-          <Icon name="lucide:menu" />
-        </button>
-      </div>
+  <div class="hidden border-t border-base-300 lg:block">
+    <div class="container">
+      <MainNav lang={resolvedLang} />
     </div>
   </div>
 

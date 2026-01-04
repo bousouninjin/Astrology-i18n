@@ -64,6 +64,7 @@
     "roam": { "h1": "放浪", "h2": "旅の途上で、人と世界の真なるつながりを感じる" }
   },
   "navigation": {
+    "home": "ホーム",
     "build": "起業",
     "invest": "投資",
     "life": "人生"
@@ -90,7 +91,7 @@
     "back": "戻る",
     "next": "次へ",
     "previous": "前へ",
-    "readMore": "続きを読む",
+    "readMore": "すべて見る",
     "pagination": {
       "totalPosts": "全 {count} 件の投稿",
       "totalPostsWithLang": "{lang} 全 {count} 件の投稿",
@@ -113,7 +114,7 @@
   "homepage": {
     "featuredPosts": "注目記事",
     "topArticles": "人気記事",
-    "latestArticles": "最新記事"
+    "latestArticles": "最新ニュース"
   },
   "notFound": {
     "title": "ページが見つかりません",

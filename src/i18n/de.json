@@ -97,6 +97,7 @@
     }
   },
   "navigation": {
+    "home": "Startseite",
     "build": "Aufbauen",
     "invest": "Investieren",
     "life": "Leben"
@@ -123,7 +124,7 @@
     "back": "Zurück",
     "next": "Weiter",
     "previous": "Zurück",
-    "readMore": "Weiterlesen",
+    "readMore": "Alle ansehen",
     "pagination": {
       "totalPosts": "{count} Beiträge insgesamt",
       "totalPostsWithLang": "{lang} {count} Beiträge insgesamt",
@@ -146,7 +147,7 @@
   "homepage": {
     "featuredPosts": "Hervorgehobene Beiträge",
     "topArticles": "Beliebte Artikel",
-    "latestArticles": "Neueste Artikel"
+    "latestArticles": "Neueste Nachrichten"
   },
   "notFound": {
     "title": "Seite nicht gefunden",

@@ -20,9 +20,9 @@ const THEME_OPTIONS = [
 ];
 ---
 
-<details class={`relative group ${className ?? ''}`.trim()} data-theme-root>
+<details class={`dropdown dropdown-end ${className ?? ''}`.trim()} data-theme-root>
   <summary
-    class="cursor-pointer rounded-md p-2 text-neutral-700 select-none hover:bg-neutral-100 focus:outline-none dark:text-neutral-300 dark:hover:bg-neutral-800"
+    class="btn btn-ghost btn-circle"
     aria-label={t(resolvedLang, 'theme.toggle')}
   >
     <span data-theme-icon>
@@ -32,27 +32,23 @@ const THEME_OPTIONS = [
     <span class="sr-only">{t(resolvedLang, 'theme.toggle')}</span>
   </summary>
 
-  <div
-    class="absolute top-full left-1/2 z-50 mt-1 min-w-40 -translate-x-1/2 rounded-md border border-neutral-200/70 bg-white py-1.5 shadow-lg dark:border-neutral-800/70 dark:bg-neutral-900"
-    role="menu"
-    aria-orientation="vertical"
-    aria-labelledby="theme-menu-button"
-  >
+  <ul class="dropdown-content menu z-50 mt-2 w-44 rounded-box bg-base-100 p-1 shadow">
     {
       THEME_OPTIONS.map((option) => (
-        <button
-          type="button"
-          class="flex w-full items-center gap-2 px-2.5 py-1.5 text-left text-sm hover:bg-neutral-50 focus:bg-neutral-50 focus:outline-none dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-          role="menuitem"
-          data-theme-option={option.value}
-          aria-pressed={false}
-        >
-          <Icon name={option.icon} class="flex-shrink-0" />
-          <span>{option.label}</span>
-        </button>
+        <li>
+          <button
+            type="button"
+            class="flex items-center gap-2 text-sm"
+            data-theme-option={option.value}
+            aria-pressed={false}
+          >
+            <Icon name={option.icon} class="flex-shrink-0" />
+            <span>{option.label}</span>
+          </button>
+        </li>
       ))
     }
-  </div>
+  </ul>
 </details>
 
 <script>
@@ -73,11 +69,9 @@ const THEME_OPTIONS = [
     }
 
     function applyTheme(theme: 'light' | 'dark') {
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+      const root = document.documentElement;
+      root.classList.toggle('dark', theme === 'dark');
+      root.setAttribute('data-theme', theme);
       updateIcon(theme);
     }
 
@@ -113,7 +107,7 @@ const THEME_OPTIONS = [
       const mobilePanel = document.querySelector('[data-mobile-panel]');
       if (
         mobilePanel &&
-        mobilePanel.classList.contains('md:hidden') &&
+        mobilePanel.classList.contains('lg:hidden') &&
         !mobilePanel.classList.contains('hidden')
       ) {
         mobilePanel.classList.add('hidden');

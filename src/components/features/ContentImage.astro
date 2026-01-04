@@ -31,7 +31,7 @@ const fetchpriority =
   (isPriority ? 'high' : props.fetchpriority) ?? (loading === 'lazy' ? 'low' : 'auto');
 const sizes = props.sizes ?? '(min-width: 1024px) 768px, 100vw';
 const rounded = props.rounded ?? true;
-const cls = [props.class, 'h-auto max-w-full', rounded ? 'rounded-lg' : '']
+const cls = [props.class, 'h-auto max-w-full', rounded ? 'rounded-md' : '']
   .filter(Boolean)
   .join(' ');
 ---

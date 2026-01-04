@@ -6,15 +6,21 @@ import GTMBody from '@/analytics/GTMBody.astro';
 import type { Lang } from '@/utils/i18n';
 import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
+import '@fontsource/source-sans-pro/400.css';
+import '@fontsource/source-sans-pro/600.css';
+import '@fontsource/source-sans-pro/700.css';
+import '@fontsource-variable/source-serif-4';
 
 interface Props {
   lang?: Lang;
+  mainClass?: string;
 }
 
-const { lang: langProp = 'zh' } = Astro.props as Props;
+const { lang: langProp = 'zh', mainClass } = Astro.props as Props;
 const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
   (langProp as Lang | undefined) ??
   'zh') as Lang;
+const mainClassName = `container flex-1 ${mainClass ?? 'py-6 lg:py-8'}`.trim();
 ---
 
 <!doctype html>
@@ -29,10 +35,10 @@ const resolvedLang = ((Astro.currentLocale as Lang | undefined) ??
     <script src="../utils/page-init.ts"></script>
     <script src="../utils/image-fade-in.ts"></script>
   </head>
-  <body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
+  <body class="bg-base-100 text-base-content">
     <div class="flex min-h-dvh flex-col">
       <Header lang={resolvedLang} />
-      <main id="main" class="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-5 md:px-6">
+      <main id="main" class={mainClassName}>
         <slot />
       </main>
       <Footer lang={resolvedLang} />

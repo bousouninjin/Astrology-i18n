@@ -1,6 +1,7 @@
 ---
 import OptimizedPicture from '@/features/OptimizedPicture.astro';
 import SkeletonCardDescription from '@/ui/SkeletonCardDescription.astro';
+import Divider from '@/ui/Divider.astro';
 import { formatDate } from '@/utils/date';
 import type { Lang } from '@/utils/i18n';
 import { categoryLabel } from '@/utils/translations';
@@ -17,6 +18,7 @@ interface Props {
 
   priority?: boolean;
   aspectClass?: string;
+  variant?: 'default' | 'subheadline';
   class?: string;
   loading?: boolean;
 }
@@ -31,81 +33,71 @@ const {
   category,
   lang = 'zh',
   priority = false,
-  aspectClass = 'aspect-[16/9]',
+  aspectClass = 'aspect-video',
+  variant = 'default',
   class: className,
   loading = false,
 } = Astro.props as Props;
 
 const Container = href ? 'a' : 'div';
 const containerAttrs = href ? { href } : {};
+const isSubheadline = variant === 'subheadline';
+const containerClass = [
+  'group relative isolate flex',
+  isSubheadline ? 'items-stretch gap-2' : 'flex-col gap-3 sm:flex-row',
+  className ?? '',
+]
+  .filter(Boolean)
+  .join(' ');
+const contentClass = isSubheadline
+  ? 'flex flex-1 flex-col gap-2'
+  : 'flex flex-1 flex-col gap-2 py-1';
+const metaClass = isSubheadline ? 'mt-1 lg:mt-auto' : 'mt-auto';
+const imageWrapperClass = isSubheadline
+  ? 'overflow-hidden w-[165px] h-[125px] md:w-[120px] md:h-full shrink-0 rounded-md'
+  : `overflow-hidden rounded-md ${aspectClass} w-full sm:w-40 shrink-0`;
+const sizesAttr = isSubheadline ? '(max-width: 768px) 165px, 120px' : '(max-width: 640px) 100vw, 160px';
 ---
 
 {
   loading ? (
-    <SkeletonCardDescription aspectClass={aspectClass} class={className} />
+    <SkeletonCardDescription aspectClass={aspectClass} variant={variant} class={className} />
   ) : (
     <Container
       {...containerAttrs}
-      class={`group block h-full overflow-hidden rounded-xl ${className ?? ''}`.trim()}
+      class={containerClass}
     >
-      <div class={`relative sm:hidden ${aspectClass} w-full overflow-hidden`}>
+      <div class={contentClass}>
+        <h3
+          class="text-base font-semibold leading-snug lg:group-hover:underline underline-offset-2"
+          style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;"
+        >
+          {title}
+        </h3>
+        {description && (
+          <p
+            class="text-sm text-base-content/80"
+            style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;"
+          >
+            {description}
+          </p>
+        )}
+        <div class={`${metaClass} flex items-center text-xs text-base-content/80`.trim()}>
+          {category && <span class="text-primary dark:text-secondary">{categoryLabel(lang, category)}</span>}
+          {category && date && <Divider />}
+          <span>{date ? formatDate(date, lang) : ''}</span>
+        </div>
+      </div>
+      <div class={imageWrapperClass}>
         <OptimizedPicture
           src={imageSrc}
           alt={imageAlt}
-          class="absolute inset-0 h-full w-full object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-[1.03]"
+          class="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
           fit="cover"
           position="center"
           priority={priority}
+          sizes={sizesAttr}
         />
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/80"></div>
-        <div class="absolute inset-x-0 bottom-0 p-4">
-          <div class="flex items-center justify-between text-xs text-white/85">
-            <span>{date ? formatDate(date, lang) : ''}</span>
-            {category && <span class="ml-4 truncate">{categoryLabel(lang, category)}</span>}
-          </div>
-          <h3
-            class="mt-1 text-base leading-snug font-semibold text-white"
-            style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;"
-          >
-            {title}
-          </h3>
-        </div>
-      </div>
-
-      <div class="hidden h-full sm:flex sm:flex-col">
-        <div class={`relative ${aspectClass} w-full overflow-hidden`}>
-          <OptimizedPicture
-            src={imageSrc}
-            alt={imageAlt}
-            class="absolute inset-0 h-full w-full object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-[1.03]"
-            fit="cover"
-            position="center"
-            priority={priority}
-            sizes="100vw"
-          />
-        </div>
-        <div class="flex flex-1 flex-col p-4">
-          <h3
-            class="text-base leading-snug font-bold text-neutral-900 sm:text-lg dark:text-neutral-100"
-            style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;"
-          >
-            {title}
-          </h3>
-          {description && (
-            <p
-              class="mt-4 text-sm leading-snug text-neutral-600 dark:text-neutral-300"
-              style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;"
-            >
-              {description}
-            </p>
-          )}
-
-          <div class="h-4" />
-          <div class="mt-auto flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
-            <span>{date ? formatDate(date, lang) : ''}</span>
-            {category && <span class="ml-4 truncate">{categoryLabel(lang, category)}</span>}
-          </div>
-        </div>
       </div>
     </Container>
   )

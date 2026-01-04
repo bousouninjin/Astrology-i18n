@@ -28,28 +28,28 @@ const FLAG_MAP: Record<Lang, string> = {
 const currentFlag = FLAG_MAP[resolvedLang] ?? '🌐';
 ---
 
-<details class={`relative ${className ?? ''}`.trim()} data-lang-root>
+<details class={`dropdown dropdown-end ${className ?? ''}`.trim()} data-lang-root>
   <summary
-    class="cursor-pointer rounded-md p-2 text-neutral-700 select-none hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+    class="btn btn-ghost btn-circle"
   >
     <span aria-hidden="true">{currentFlag}</span>
     <span class="sr-only">{t(resolvedLang, 'language.switch')}</span>
   </summary>
-  <div
-    class="absolute top-full left-1/2 z-50 mt-1 min-w-40 -translate-x-1/2 rounded-md border border-neutral-200/70 bg-white py-1.5 shadow-lg dark:border-neutral-800/70 dark:bg-neutral-900"
-  >
+  <ul class="dropdown-content menu z-50 mt-2 w-52 rounded-box bg-base-100 p-1 shadow">
     {
       SUPPORTED_LANGS.map((l) => (
-        <a
-          href={toAbsolute(l, Astro.url.pathname)}
-          class={`flex items-center gap-2 px-2.5 py-1.5 text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 ${l === resolvedLang ? 'font-medium text-neutral-900 dark:text-white' : 'text-neutral-700 dark:text-neutral-300'}`}
-        >
-          <span aria-hidden="true">{FLAG_MAP[l] ?? '🌐'}</span>
-          <span>{t(l, 'language.name')}</span>
-        </a>
+        <li>
+          <a
+            href={toAbsolute(l, Astro.url.pathname)}
+            class={`flex items-center gap-2 text-sm ${l === resolvedLang ? 'font-medium' : ''}`}
+          >
+            <span aria-hidden="true">{FLAG_MAP[l] ?? '🌐'}</span>
+            <span>{t(l, 'language.name')}</span>
+          </a>
+        </li>
       ))
     }
-  </div>
+  </ul>
 </details>
 
 <style>
