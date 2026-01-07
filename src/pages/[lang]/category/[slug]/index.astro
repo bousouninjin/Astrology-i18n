@@ -7,9 +7,10 @@ import CardWithPriority from '@/features/CardWithPriority.astro';
 import type { Lang } from '@/utils/i18n';
 import { DEFAULT_LANG, SUPPORTED_LANGS } from '@/utils/i18n';
 import { t } from '@/utils/translations';
+import { NAV_ITEMS } from '@/utils/navItems';
 
 export async function getStaticPaths() {
-  const CATEGORY_KEYS = ['build', 'invest', 'life'] as const;
+  const CATEGORY_KEYS = NAV_ITEMS.map((item) => item.key);
   return SUPPORTED_LANGS.flatMap((lang) =>
     CATEGORY_KEYS.map((slug) => ({ params: { lang, slug } })),
   );

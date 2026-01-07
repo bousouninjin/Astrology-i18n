@@ -26,20 +26,17 @@
     "relatedPosts": "Artikel Terkait"
   },
   "categories": {
-    "life": "Kehidupan",
-    "invest": "Investasi",
-    "build": "Membangun"
+    "resolving_conflict": "Resolving Conflict",
+    "deepening_love": "Deepening Love",
+    "understanding_partners": "Understanding Partners",
+    "self_growth": "Self Growth"
   },
   "tags": {
-    "reflect": "Merenung",
-    "media": "Media",
-    "roam": "Mengembara",
-    "risk": "Risiko",
-    "strategy": "Strategi",
-    "allocation": "Alokasi",
-    "innovation": "Inovasi",
-    "model": "Model",
-    "management": "Manajemen"
+    "repair": "Repair",
+    "danger_signs": "Danger Signs",
+    "daily_habits": "Daily Habits",
+    "mindset": "Mindset",
+    "intimacy": "Intimacy"
   },
   "headings": {
     "home": {
@@ -47,59 +44,41 @@
       "h1": "Astrology",
       "h2": "Menyusuri lautan kehidupan, gelombang kewirausahaan, dan kabut investasi"
     },
-    "build": { "h1": "Membangun", "h2": "Jalan dari nol ke satu, menangkap peluang dan tantangan" },
-    "innovation": {
-      "h1": "Inovasi",
-      "h2": "Didorong teknologi dan pemikiran terobosan, mencari kekuatan untuk mengubah dunia"
+    "resolving_conflict": {
+      "h1": "Resolving Conflict",
+      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
     },
-    "model": {
-      "h1": "Model",
-      "h2": "Dari kasus ke tren, mengeksplorasi logika pertumbuhan yang dapat direplikasi"
+    "deepening_love": {
+      "h1": "Deepening Love",
+      "h2": "Strengthen your bond through love languages and gratitude"
     },
-    "management": {
-      "h1": "Manajemen",
-      "h2": "Menyeimbangkan strategi dan eksekusi untuk membangun organisasi yang efisien dan budaya tim"
+    "understanding_partners": {
+      "h1": "Understanding Partners",
+      "h2": "Understand differences and backgrounds to resolve misunderstandings"
     },
-    "invest": { "h1": "Investasi", "h2": "Seni menangkap nilai, logika ganda modal dan industri" },
-    "risk": {
-      "h1": "Risiko",
-      "h2": "Kepastian dalam ketidakpastian: cara mengidentifikasi dan lindung nilai secara efektif"
-    },
-    "strategy": {
-      "h1": "Strategi",
-      "h2": "Maju dalam permainan, membangun keunggulan jangka panjang dan parit pertahanan"
-    },
-    "allocation": {
-      "h1": "Alokasi",
-      "h2": "Solusi optimal sumber daya: menyeimbangkan modal, waktu, dan energi"
-    },
-    "life": {
-      "h1": "Kehidupan",
-      "h2": "Melampaui efisiensi dan output: mengejar keseimbangan, kesehatan, dan kebahagiaan"
-    },
-    "reflect": {
-      "h1": "Merenung",
-      "h2": "Perlambat dan berpikir mendalam tentang kemungkinan masa depan"
-    },
-    "media": {
-      "h1": "Media",
-      "h2": "Dari membaca ke mengamati, mendapatkan wawasan dan inspirasi lintas disiplin"
-    },
-    "roam": {
-      "h1": "Mengembara",
-      "h2": "Di perjalanan, merasakan koneksi sejati antara manusia dan dunia"
+    "self_growth": {
+      "h1": "Self Growth",
+      "h2": "Manage emotions and accept yourself"
     }
   },
   "navigation": {
     "home": "Beranda",
-    "build": "Membangun",
-    "invest": "Investasi",
-    "life": "Kehidupan"
+    "resolving_conflict": "Conflict",
+    "deepening_love": "Love",
+    "understanding_partners": "Partners",
+    "self_growth": "Growth"
   },
   "pages": {
-    "about": { "title": "Tentang" },
-    "author": { "title": "Penulis", "writingActivity": "Aktivitas menulis" },
-    "posts": { "title": "Semua Artikel" },
+    "about": {
+      "title": "Tentang"
+    },
+    "author": {
+      "title": "Penulis",
+      "writingActivity": "Aktivitas menulis"
+    },
+    "posts": {
+      "title": "Semua Artikel"
+    },
     "categories": {
       "title": "Kategori",
       "h2": "Jelajahi kategori",

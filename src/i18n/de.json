@@ -26,20 +26,17 @@
     "relatedPosts": "Ähnliche Beiträge"
   },
   "categories": {
-    "life": "Leben",
-    "invest": "Investieren",
-    "build": "Aufbauen"
+    "resolving_conflict": "Resolving Conflict",
+    "deepening_love": "Deepening Love",
+    "understanding_partners": "Understanding Partners",
+    "self_growth": "Self Growth"
   },
   "tags": {
-    "reflect": "Nachdenken",
-    "media": "Medien",
-    "roam": "Umherstreifen",
-    "risk": "Risiko",
-    "strategy": "Strategie",
-    "allocation": "Allokation",
-    "innovation": "Innovation",
-    "model": "Modell",
-    "management": "Management"
+    "repair": "Repair",
+    "danger_signs": "Danger Signs",
+    "daily_habits": "Daily Habits",
+    "mindset": "Mindset",
+    "intimacy": "Intimacy"
   },
   "headings": {
     "home": {
@@ -47,65 +44,41 @@
       "h1": "Astrology",
       "h2": "Vorwärts durch den Ozean des Lebens, die Wellen des Unternehmertums und den Nebel der Investitionen"
     },
-    "build": {
-      "h1": "Aufbauen",
-      "h2": "Der Weg von null auf eins – Chancen und Herausforderungen erkennen"
+    "resolving_conflict": {
+      "h1": "Resolving Conflict",
+      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
     },
-    "innovation": {
-      "h1": "Innovation",
-      "h2": "Technologiegetrieben und mit Durchbruchsdenken – die Kraft suchen, die die Welt verändert"
+    "deepening_love": {
+      "h1": "Deepening Love",
+      "h2": "Strengthen your bond through love languages and gratitude"
     },
-    "model": {
-      "h1": "Modell",
-      "h2": "Von Fällen zu Trends – wiederholbare Wachstumslogik erkunden"
+    "understanding_partners": {
+      "h1": "Understanding Partners",
+      "h2": "Understand differences and backgrounds to resolve misunderstandings"
     },
-    "management": {
-      "h1": "Management",
-      "h2": "Strategie und Umsetzung balancieren – eine effiziente Organisation und Teamkultur aufbauen"
-    },
-    "invest": {
-      "h1": "Investieren",
-      "h2": "Die Kunst, Wert zu erfassen – die doppelte Logik von Kapital und Industrie"
-    },
-    "risk": {
-      "h1": "Risiko",
-      "h2": "Gewissheit in der Ungewissheit – Risiken wirksam erkennen und absichern"
-    },
-    "strategy": {
-      "h1": "Strategie",
-      "h2": "Im Wettbewerb voranschreiten – dauerhafte Vorteile und Schutzgräben aufbauen"
-    },
-    "allocation": {
-      "h1": "Allokation",
-      "h2": "Die optimale Nutzung von Ressourcen – Kapital, Zeit und Energie ausbalancieren"
-    },
-    "life": {
-      "h1": "Leben",
-      "h2": "Über Effizienz und Output hinaus – nach Balance, Gesundheit und Glück streben"
-    },
-    "reflect": {
-      "h1": "Nachdenken",
-      "h2": "Tempo drosseln und tief über zukünftige Möglichkeiten nachdenken"
-    },
-    "media": {
-      "h1": "Medien",
-      "h2": "Vom Lesen zur Beobachtung – fachübergreifende Inspiration und Einsichten gewinnen"
-    },
-    "roam": {
-      "h1": "Umherstreifen",
-      "h2": "Unterwegs die echte Verbindung zwischen Mensch und Welt spüren"
+    "self_growth": {
+      "h1": "Self Growth",
+      "h2": "Manage emotions and accept yourself"
     }
   },
   "navigation": {
     "home": "Startseite",
-    "build": "Aufbauen",
-    "invest": "Investieren",
-    "life": "Leben"
+    "resolving_conflict": "Conflict",
+    "deepening_love": "Love",
+    "understanding_partners": "Partners",
+    "self_growth": "Growth"
   },
   "pages": {
-    "about": { "title": "Über" },
-    "author": { "title": "Autor", "writingActivity": "Schreibaktivität" },
-    "posts": { "title": "Alle Artikel" },
+    "about": {
+      "title": "Über"
+    },
+    "author": {
+      "title": "Autor",
+      "writingActivity": "Schreibaktivität"
+    },
+    "posts": {
+      "title": "Alle Artikel"
+    },
     "categories": {
       "title": "Kategorien",
       "h2": "Alle Kategorien",

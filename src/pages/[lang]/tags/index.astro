@@ -4,6 +4,7 @@ import LandingLayout from '@/layouts/LandingLayout.astro';
 import type { Lang } from '@/utils/i18n';
 import { DEFAULT_LANG, SUPPORTED_LANGS } from '@/utils/i18n';
 import { t } from '@/utils/translations';
+import { NAV_ITEMS } from '@/utils/navItems';
 
 export async function getStaticPaths() {
   return SUPPORTED_LANGS.map((lang) => ({ params: { lang } }));
@@ -13,17 +14,7 @@ const lang = ((Astro.params.lang as Lang) || DEFAULT_LANG) as Lang;
 
 const all = await getCollection('post', (p) => !p.data.draft && p.data.locales === lang);
 
-const TAG_KEYS = [
-  'reflect',
-  'media',
-  'roam',
-  'risk',
-  'strategy',
-  'allocation',
-  'innovation',
-  'model',
-  'management',
-] as const;
+const TAG_KEYS = [...new Set(NAV_ITEMS.flatMap((item) => item.tags))];
 
 function countFor(key: (typeof TAG_KEYS)[number]) {
   const translated = String(t(lang as any, `tags.${key}`)).toLowerCase();

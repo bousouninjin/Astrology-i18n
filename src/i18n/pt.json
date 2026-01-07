@@ -26,20 +26,17 @@
     "relatedPosts": "Artigos relacionados"
   },
   "categories": {
-    "life": "Vida",
-    "invest": "Investir",
-    "build": "Construir"
+    "resolving_conflict": "Resolving Conflict",
+    "deepening_love": "Deepening Love",
+    "understanding_partners": "Understanding Partners",
+    "self_growth": "Self Growth"
   },
   "tags": {
-    "reflect": "Refletir",
-    "media": "Mídia",
-    "roam": "Vagar",
-    "risk": "Risco",
-    "strategy": "Estratégia",
-    "allocation": "Alocação",
-    "innovation": "Inovação",
-    "model": "Modelo",
-    "management": "Gestão"
+    "repair": "Repair",
+    "danger_signs": "Danger Signs",
+    "daily_habits": "Daily Habits",
+    "mindset": "Mindset",
+    "intimacy": "Intimacy"
   },
   "headings": {
     "home": {
@@ -47,62 +44,41 @@
       "h1": "Astrology",
       "h2": "Avançando pelo oceano da vida, pelas ondas do empreendedorismo e pela névoa dos investimentos"
     },
-    "build": { "h1": "Construir", "h2": "Do zero ao um: identificar oportunidades e desafios" },
-    "innovation": {
-      "h1": "Inovação",
-      "h2": "Impulsionada pela tecnologia e pelo pensamento de ruptura, buscando a força para mudar o mundo"
+    "resolving_conflict": {
+      "h1": "Resolving Conflict",
+      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
     },
-    "model": {
-      "h1": "Modelo",
-      "h2": "Dos casos às tendências: explorar uma lógica de crescimento replicável"
+    "deepening_love": {
+      "h1": "Deepening Love",
+      "h2": "Strengthen your bond through love languages and gratitude"
     },
-    "management": {
-      "h1": "Gestão",
-      "h2": "Equilibrar estratégia e execução para construir uma organização eficiente e uma cultura de equipe"
+    "understanding_partners": {
+      "h1": "Understanding Partners",
+      "h2": "Understand differences and backgrounds to resolve misunderstandings"
     },
-    "invest": {
-      "h1": "Investir",
-      "h2": "A arte de capturar valor: a dupla lógica do capital e da indústria"
-    },
-    "risk": {
-      "h1": "Risco",
-      "h2": "Certeza na incerteza: como identificar e fazer hedge de forma eficaz"
-    },
-    "strategy": {
-      "h1": "Estratégia",
-      "h2": "Avançar no jogo, construindo vantagens de longo prazo e fossos defensivos"
-    },
-    "allocation": {
-      "h1": "Alocação",
-      "h2": "O uso ótimo dos recursos: equilibrar capital, tempo e energia"
-    },
-    "life": {
-      "h1": "Vida",
-      "h2": "Além da eficiência e do resultado: buscar equilíbrio, saúde e felicidade"
-    },
-    "reflect": {
-      "h1": "Reflexão",
-      "h2": "Desacelerar e pensar profundamente sobre as possibilidades do futuro"
-    },
-    "media": {
-      "h1": "Mídia",
-      "h2": "Da leitura à observação: obter inspirações e insights interdisciplinares"
-    },
-    "roam": {
-      "h1": "Vagar",
-      "h2": "Na estrada, sentir a conexão genuína entre as pessoas e o mundo"
+    "self_growth": {
+      "h1": "Self Growth",
+      "h2": "Manage emotions and accept yourself"
     }
   },
   "navigation": {
     "home": "Início",
-    "build": "Construir",
-    "invest": "Investir",
-    "life": "Vida"
+    "resolving_conflict": "Conflict",
+    "deepening_love": "Love",
+    "understanding_partners": "Partners",
+    "self_growth": "Growth"
   },
   "pages": {
-    "about": { "title": "Sobre" },
-    "author": { "title": "Autor", "writingActivity": "Atividade de escrita" },
-    "posts": { "title": "Todos os artigos" },
+    "about": {
+      "title": "Sobre"
+    },
+    "author": {
+      "title": "Autor",
+      "writingActivity": "Atividade de escrita"
+    },
+    "posts": {
+      "title": "Todos os artigos"
+    },
     "categories": {
       "title": "Categorias",
       "h2": "Explorar categorias",

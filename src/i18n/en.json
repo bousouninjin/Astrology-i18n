@@ -26,20 +26,17 @@
     "relatedPosts": "Related Posts"
   },
   "categories": {
-    "life": "Life",
-    "invest": "Invest",
-    "build": "Build"
+    "resolving_conflict": "Resolving Conflict",
+    "deepening_love": "Deepening Love",
+    "understanding_partners": "Understanding Partners",
+    "self_growth": "Self Growth"
   },
   "tags": {
-    "reflect": "Reflect",
-    "media": "Media",
-    "roam": "Roam",
-    "risk": "Risk",
-    "strategy": "Strategy",
-    "allocation": "Allocation",
-    "innovation": "Innovation",
-    "model": "Model",
-    "management": "Management"
+    "repair": "Repair",
+    "danger_signs": "Danger Signs",
+    "daily_habits": "Daily Habits",
+    "mindset": "Mindset",
+    "intimacy": "Intimacy"
   },
   "headings": {
     "home": {
@@ -47,56 +44,41 @@
       "h1": "Astrology",
       "h2": "Navigating life, entrepreneurship, and the fog of investing"
     },
-    "build": {
-      "h1": "Build",
-      "h2": "The path from zero to one, spotting opportunities and challenges"
+    "resolving_conflict": {
+      "h1": "Resolving Conflict",
+      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
     },
-    "innovation": {
-      "h1": "Innovation",
-      "h2": "Technology-driven and breakthrough thinking, seeking the power to change the world"
+    "deepening_love": {
+      "h1": "Deepening Love",
+      "h2": "Strengthen your bond through love languages and gratitude"
     },
-    "model": { "h1": "Model", "h2": "From cases to trends, exploring repeatable growth logic" },
-    "management": {
-      "h1": "Management",
-      "h2": "Balancing strategy and execution to build an efficient organization and team culture"
+    "understanding_partners": {
+      "h1": "Understanding Partners",
+      "h2": "Understand differences and backgrounds to resolve misunderstandings"
     },
-    "invest": {
-      "h1": "Invest",
-      "h2": "The art of capturing value, the dual logic of capital and industry"
-    },
-    "risk": {
-      "h1": "Risk",
-      "h2": "Certainty within uncertainty: how to identify and hedge effectively"
-    },
-    "strategy": {
-      "h1": "Strategy",
-      "h2": "Moving forward in the game, building long-term advantages and moats"
-    },
-    "allocation": {
-      "h1": "Allocation",
-      "h2": "The optimal use of resources: balancing capital, time, and energy"
-    },
-    "life": {
-      "h1": "Life",
-      "h2": "Beyond efficiency and output: pursuing balance, health, and happiness"
-    },
-    "reflect": { "h1": "Reflect", "h2": "Slow down and think deeply about future possibilities" },
-    "media": {
-      "h1": "Media",
-      "h2": "From reading to observing, gaining cross-boundary inspiration and insight"
-    },
-    "roam": { "h1": "Roam", "h2": "On the road, feeling a genuine connection with the world" }
+    "self_growth": {
+      "h1": "Self Growth",
+      "h2": "Manage emotions and accept yourself"
+    }
   },
   "navigation": {
     "home": "Home",
-    "build": "Build",
-    "invest": "Invest",
-    "life": "Life"
+    "resolving_conflict": "Conflict",
+    "deepening_love": "Love",
+    "understanding_partners": "Partners",
+    "self_growth": "Growth"
   },
   "pages": {
-    "about": { "title": "About" },
-    "author": { "title": "Author", "writingActivity": "Writing Activity" },
-    "posts": { "title": "All Posts" },
+    "about": {
+      "title": "About"
+    },
+    "author": {
+      "title": "Author",
+      "writingActivity": "Writing Activity"
+    },
+    "posts": {
+      "title": "All Posts"
+    },
     "categories": {
       "title": "Categories",
       "h2": "Browse Categories",

@@ -47,9 +47,10 @@ const {
 
 const pictureFormats: Array<'avif'> = ['avif'];
 
-const isRemote = typeof src === 'string' && /^(https?:)?\/\/.*/.test(src);
+const isRemote =
+  typeof src === 'string' && (/^(https?:)?\/\/.*/.test(src) || src.startsWith('/'));
 
-const shouldInfer = inferSize ?? false;
+const shouldInfer = inferSize ?? (typeof src === 'string' && (src.startsWith('/') || isRemote));
 
 const hasRoundedClass = typeof className === 'string' && /\brounded(?:-[^\s]+)?\b/.test(className);
 const roundedForImg = rounded && !hasRoundedClass ? 'rounded-md' : '';

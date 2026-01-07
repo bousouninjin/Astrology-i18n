@@ -26,20 +26,17 @@
     "relatedPosts": "관련 게시물"
   },
   "categories": {
-    "life": "인생",
-    "invest": "투자",
-    "build": "창업"
+    "resolving_conflict": "Resolving Conflict",
+    "deepening_love": "Deepening Love",
+    "understanding_partners": "Understanding Partners",
+    "self_growth": "Self Growth"
   },
   "tags": {
-    "reflect": "성찰",
-    "media": "미디어",
-    "roam": "방랑",
-    "risk": "위험",
-    "strategy": "전략",
-    "allocation": "할당",
-    "innovation": "혁신",
-    "model": "모델",
-    "management": "관리"
+    "repair": "Repair",
+    "danger_signs": "Danger Signs",
+    "daily_habits": "Daily Habits",
+    "mindset": "Mindset",
+    "intimacy": "Intimacy"
   },
   "headings": {
     "home": {
@@ -47,29 +44,41 @@
       "h1": "Astrology",
       "h2": "삶의 바다, 창업의 파도, 투자의 안개 속을 나아갑니다"
     },
-    "build": { "h1": "창업", "h2": "제로에서 일로 가는 길, 기회와 도전을 포착" },
-    "innovation": { "h1": "혁신", "h2": "기술 주도와 사고의 돌파로 세상을 바꾸는 힘을 모색" },
-    "model": { "h1": "모델", "h2": "사례에서 트렌드까지, 반복 가능한 성장 논리를 탐구" },
-    "management": { "h1": "관리", "h2": "전략과 실행의 균형, 효율적인 조직과 팀 문화를 구축" },
-    "invest": { "h1": "투자", "h2": "가치를 포착하는 예술, 자본과 산업의 이중 논리" },
-    "risk": { "h1": "위험", "h2": "불확실성 속의 확실성: 효과적으로 식별하고 헤지하는 방법" },
-    "strategy": { "h1": "전략", "h2": "게임 속에서 전진하며 장기적 우위와 해자를 구축" },
-    "allocation": { "h1": "할당", "h2": "자원의 최적 해법: 자본·시간·에너지의 균형" },
-    "life": { "h1": "인생", "h2": "효율과 성과를 넘어 균형·건강·행복을 추구" },
-    "reflect": { "h1": "성찰", "h2": "속도를 늦추고 미래의 가능성을 깊이 사유" },
-    "media": { "h1": "미디어", "h2": "독서에서 관찰까지, 경계를 넘는 영감과 통찰을 얻기" },
-    "roam": { "h1": "방랑", "h2": "길 위에서 사람과 세계의 진정한 연결을 느끼기" }
+    "resolving_conflict": {
+      "h1": "Resolving Conflict",
+      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
+    },
+    "deepening_love": {
+      "h1": "Deepening Love",
+      "h2": "Strengthen your bond through love languages and gratitude"
+    },
+    "understanding_partners": {
+      "h1": "Understanding Partners",
+      "h2": "Understand differences and backgrounds to resolve misunderstandings"
+    },
+    "self_growth": {
+      "h1": "Self Growth",
+      "h2": "Manage emotions and accept yourself"
+    }
   },
   "navigation": {
     "home": "홈",
-    "build": "창업",
-    "invest": "투자",
-    "life": "인생"
+    "resolving_conflict": "Conflict",
+    "deepening_love": "Love",
+    "understanding_partners": "Partners",
+    "self_growth": "Growth"
   },
   "pages": {
-    "about": { "title": "소개" },
-    "author": { "title": "저자", "writingActivity": "글쓰기 활동" },
-    "posts": { "title": "모든 글" },
+    "about": {
+      "title": "소개"
+    },
+    "author": {
+      "title": "저자",
+      "writingActivity": "글쓰기 활동"
+    },
+    "posts": {
+      "title": "모든 글"
+    },
     "categories": {
       "title": "카테고리",
       "h2": "카테고리 둘러보기",

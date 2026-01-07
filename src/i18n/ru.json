@@ -26,20 +26,17 @@
     "relatedPosts": "Похожие статьи"
   },
   "categories": {
-    "life": "Жизнь",
-    "invest": "Инвестировать",
-    "build": "Строить"
+    "resolving_conflict": "Resolving Conflict",
+    "deepening_love": "Deepening Love",
+    "understanding_partners": "Understanding Partners",
+    "self_growth": "Self Growth"
   },
   "tags": {
-    "reflect": "Размышление",
-    "media": "Медиа",
-    "roam": "Бродить",
-    "risk": "Риск",
-    "strategy": "Стратегия",
-    "allocation": "Распределение",
-    "innovation": "Инновация",
-    "model": "Модель",
-    "management": "Управление"
+    "repair": "Repair",
+    "danger_signs": "Danger Signs",
+    "daily_habits": "Daily Habits",
+    "mindset": "Mindset",
+    "intimacy": "Intimacy"
   },
   "headings": {
     "home": {
@@ -47,56 +44,41 @@
       "h1": "Astrology",
       "h2": "Двигаясь вперёд через океан жизни, волны предпринимательства и туман инвестиций"
     },
-    "build": { "h1": "Строить", "h2": "Путь от нуля к единице: замечать возможности и вызовы" },
-    "innovation": {
-      "h1": "Инновация",
-      "h2": "Технологии и прорывное мышление — поиск силы, меняющей мир"
+    "resolving_conflict": {
+      "h1": "Resolving Conflict",
+      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
     },
-    "model": { "h1": "Модель", "h2": "От кейсов к трендам: изучение воспроизводимой логики роста" },
-    "management": {
-      "h1": "Управление",
-      "h2": "Баланс стратегии и исполнения: построение эффективной организации и командной культуры"
+    "deepening_love": {
+      "h1": "Deepening Love",
+      "h2": "Strengthen your bond through love languages and gratitude"
     },
-    "invest": {
-      "h1": "Инвестировать",
-      "h2": "Искусство улавливать ценность: двойная логика капитала и индустрии"
+    "understanding_partners": {
+      "h1": "Understanding Partners",
+      "h2": "Understand differences and backgrounds to resolve misunderstandings"
     },
-    "risk": {
-      "h1": "Риск",
-      "h2": "Определённость в неопределённости: как эффективно выявлять и хеджировать риски"
-    },
-    "strategy": {
-      "h1": "Стратегия",
-      "h2": "Продвигаться в игре: выстраивать долгосрочные преимущества и «рвы»"
-    },
-    "allocation": {
-      "h1": "Распределение",
-      "h2": "Оптимум ресурсов: баланс капитала, времени и энергии"
-    },
-    "life": {
-      "h1": "Жизнь",
-      "h2": "За пределами эффективности и результата: стремление к балансу, здоровью и счастью"
-    },
-    "reflect": {
-      "h1": "Размышление",
-      "h2": "Замедлиться и глубоко подумать о возможностях будущего"
-    },
-    "media": {
-      "h1": "Медиа",
-      "h2": "От чтения к наблюдению: получать междисциплинарные идеи и инсайты"
-    },
-    "roam": { "h1": "Бродить", "h2": "В пути ощущать подлинную связь между людьми и миром" }
+    "self_growth": {
+      "h1": "Self Growth",
+      "h2": "Manage emotions and accept yourself"
+    }
   },
   "navigation": {
     "home": "Главная",
-    "build": "Строить",
-    "invest": "Инвестировать",
-    "life": "Жизнь"
+    "resolving_conflict": "Conflict",
+    "deepening_love": "Love",
+    "understanding_partners": "Partners",
+    "self_growth": "Growth"
   },
   "pages": {
-    "about": { "title": "О нас" },
-    "author": { "title": "Автор", "writingActivity": "Писательская активность" },
-    "posts": { "title": "Все статьи" },
+    "about": {
+      "title": "О нас"
+    },
+    "author": {
+      "title": "Автор",
+      "writingActivity": "Писательская активность"
+    },
+    "posts": {
+      "title": "Все статьи"
+    },
     "categories": {
       "title": "Категории",
       "h2": "Обзор категорий",

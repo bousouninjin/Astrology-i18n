@@ -1,7 +1,8 @@
-export type NavKey = 'build' | 'invest' | 'life';
+export type NavKey = 'resolving_conflict' | 'deepening_love' | 'understanding_partners' | 'self_growth';
 
 export const NAV_ITEMS: Array<{ key: NavKey; tags: string[] }> = [
-  { key: 'build', tags: ['innovation', 'model', 'management'] },
-  { key: 'invest', tags: ['risk', 'strategy', 'allocation'] },
-  { key: 'life', tags: ['reflect', 'media', 'roam'] },
+  { key: 'resolving_conflict', tags: ['repair', 'danger_signs'] },
+  { key: 'deepening_love', tags: ['intimacy', 'daily_habits'] },
+  { key: 'understanding_partners', tags: [] },
+  { key: 'self_growth', tags: ['mindset'] },
 ];
