@@ -1,11 +1,11 @@
 {
   "site": {
-    "name": "Astrology",
-    "titleTemplate": "%s · Astrology",
-    "description": "人生という大海、起業の波、投資の霧の中を進む",
+    "name": "Relately News",
+    "titleTemplate": "%s · Relately News",
+    "description": "科学的な関係改善のための記事",
     "twitter": {
       "site": "@idimilabs",
-      "creator": "@Astro"
+      "creator": "@relately"
     }
   },
   "language": {
@@ -46,7 +46,7 @@
   "headings": {
     "home": {
       "title": "ホーム",
-      "h1": "Astrology",
+      "h1": "Relately News",
       "h2": "愛を深め、対立を乗り越え、共に成長する"
     },
     "resolving_conflict": {

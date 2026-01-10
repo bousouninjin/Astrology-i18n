@@ -1,11 +1,9 @@
 ---
-name: "Astro"
-bio: "Sailing through life, entrepreneurship waves, and investing fog."
+name: "Matsushita"
+bio: ""
 socials:
-  - { label: "X", url: "https://x.com/idimilabs" }
-  - { label: "GitHub", url: "https://github.com/idimilabs" }
-  - { label: "Website", url: "https://inote.xyz" }
-  - { label: "RSS", url: "https://inote.xyz/en/rss.xml" }
+
+  - { label: "Website", url: "https://relately-news.asymmetry.life" }
 locales: en
 draft: false
 ---

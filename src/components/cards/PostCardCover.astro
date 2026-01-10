@@ -4,7 +4,7 @@ import SkeletonCardCover from '@/ui/SkeletonCardCover.astro';
 import Divider from '@/ui/Divider.astro';
 import { formatDate } from '@/utils/date';
 import type { Lang } from '@/utils/i18n';
-import { categoryLabel } from '@/utils/translations';
+import { categoryLabel, tagLabel } from '@/utils/translations';
 
 interface Props {
   href?: string;
@@ -13,7 +13,7 @@ interface Props {
   title: string;
   description?: string;
   date?: string | Date;
-  category?: string;
+  tags?: string[];
   lang?: Lang;
 
   priority?: boolean;
@@ -30,7 +30,7 @@ const {
   title,
   description,
   date,
-  category,
+  tags = [],
   lang = 'zh',
   priority = false,
   aspectClass = 'aspect-video',
@@ -50,8 +50,8 @@ const containerClass = [
   .filter(Boolean)
   .join(' ');
 const titleClass = isNews
-  ? 'text-xl font-serif font-semibold leading-snug lg:group-hover:underline underline-offset-2'
-  : 'text-lg font-serif font-semibold leading-snug lg:group-hover:underline underline-offset-2';
+  ? 'text-[15px] font-sans font-normal leading-[1.15] lg:group-hover:underline underline-offset-2'
+  : 'text-[15px] font-sans font-normal leading-[1.15] lg:group-hover:underline underline-offset-2';
 const descriptionClass = 'text-sm text-base-content/80 text-pretty lg:mb-auto';
 const metaClass = isNews ? 'mt-2' : 'mt-auto';
 ---
@@ -90,9 +90,9 @@ const metaClass = isNews ? 'mt-2' : 'mt-auto';
             {description}
           </p>
         )}
-        <div class={`${metaClass} flex items-center text-xs text-base-content/80`.trim()}>
-          {category && <span class="text-primary dark:text-secondary">{categoryLabel(lang, category)}</span>}
-          {category && date && <Divider />}
+        <div class={`${metaClass} flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-base-content/80`.trim()}>
+          {tags?.map((tag) => <span class="text-primary dark:text-secondary">#{tagLabel(lang, tag)}</span>)}
+          {tags?.length > 0 && date && <Divider />}
           <span>{date ? formatDate(date, lang) : ''}</span>
         </div>
       </div>

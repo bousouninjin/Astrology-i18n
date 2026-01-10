@@ -1,5 +1,6 @@
 ---
 import { Image, Picture } from 'astro:assets';
+import { resolveImage, isLocalAssetPath } from '@/utils/image-loader';
 
 type LayoutType = 'constrained' | 'full-width' | 'fixed' | 'none';
 type FitType = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
@@ -27,7 +28,7 @@ interface Props {
 }
 
 const {
-  src,
+  src: rawSrc,
   alt,
   class: className,
   layout,
@@ -47,10 +48,17 @@ const {
 
 const pictureFormats: Array<'avif'> = ['avif'];
 
-const isRemote =
-  typeof src === 'string' && (/^(https?:)?\/\/.*/.test(src) || src.startsWith('/'));
+// /images/ パスの場合、src/assets から解決した画像を使用
+const resolvedLocalImage = isLocalAssetPath(rawSrc) ? resolveImage(rawSrc) : undefined;
+const src = resolvedLocalImage ?? rawSrc;
 
-const shouldInfer = inferSize ?? (typeof src === 'string' && (src.startsWith('/') || isRemote));
+// リモート画像かどうか（http(s)://で始まる場合のみ）
+const isRemote = typeof src === 'string' && /^(https?:)?\/\/.*/.test(src);
+
+// ローカルアセットが解決できなかった場合のフォールバック（publicからの直接参照）
+const isUnresolvedPublicPath = typeof src === 'string' && src.startsWith('/');
+
+const shouldInfer = inferSize ?? (isUnresolvedPublicPath || isRemote);
 
 const hasRoundedClass = typeof className === 'string' && /\brounded(?:-[^\s]+)?\b/.test(className);
 const roundedForImg = rounded && !hasRoundedClass ? 'rounded-md' : '';

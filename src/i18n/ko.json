@@ -2,10 +2,10 @@
   "site": {
     "name": "Astrology",
     "titleTemplate": "%s · Astrology",
-    "description": "삶의 바다, 창업의 파도, 투자의 안개 속을 나아갑니다",
+    "description": "사랑의 지도를 넓히고, 갈등을 극복하며, 함께 성장하세요.",
     "twitter": {
       "site": "@idimilabs",
-      "creator": "@Astro"
+      "creator": "@relately"
     }
   },
   "language": {
@@ -26,47 +26,52 @@
     "relatedPosts": "관련 게시물"
   },
   "categories": {
-    "resolving_conflict": "Resolving Conflict",
-    "deepening_love": "Deepening Love",
-    "understanding_partners": "Understanding Partners",
-    "self_growth": "Self Growth"
+    "resolving_conflict": "갈등 해결",
+    "deepening_love": "사랑 깊게 하기",
+    "understanding_partners": "파트너 이해하기",
+    "self_growth": "자아 성장"
   },
   "tags": {
-    "repair": "Repair",
-    "danger_signs": "Danger Signs",
-    "daily_habits": "Daily Habits",
-    "mindset": "Mindset",
-    "intimacy": "Intimacy"
+    "repair": "관계 회복",
+    "danger_signs": "위험 신호",
+    "daily_habits": "일상 습관",
+    "mindset": "마인드셋",
+    "intimacy": "친밀감",
+    "parenting": "육아",
+    "in_laws": "시댁/처가",
+    "work_life": "직장 생활",
+    "sex_life": "성생활",
+    "communication": "대화"
   },
   "headings": {
     "home": {
       "title": "홈",
-      "h1": "Astrology",
-      "h2": "삶의 바다, 창업의 파도, 투자의 안개 속을 나아갑니다"
+      "h1": "Relately News",
+      "h2": "사랑을 깊게, 대립을 넘어, 함께 성장하다"
     },
     "resolving_conflict": {
-      "h1": "Resolving Conflict",
-      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
+      "h1": "갈등 해결",
+      "h2": "올바르게 싸우는 법, 관계 회복 및 이혼 방지 방법 배우기"
     },
     "deepening_love": {
-      "h1": "Deepening Love",
-      "h2": "Strengthen your bond through love languages and gratitude"
+      "h1": "사랑 깊게 하기",
+      "h2": "사랑의 언어와 감사를 통해 유대감 강화하기"
     },
     "understanding_partners": {
-      "h1": "Understanding Partners",
-      "h2": "Understand differences and backgrounds to resolve misunderstandings"
+      "h1": "파트너 이해하기",
+      "h2": "오해를 풀기 위해 차이점과 배경 이해하기"
     },
     "self_growth": {
-      "h1": "Self Growth",
-      "h2": "Manage emotions and accept yourself"
+      "h1": "자아 성장",
+      "h2": "감정 관리 및 자기 수용"
     }
   },
   "navigation": {
     "home": "홈",
-    "resolving_conflict": "Conflict",
-    "deepening_love": "Love",
-    "understanding_partners": "Partners",
-    "self_growth": "Growth"
+    "resolving_conflict": "갈등",
+    "deepening_love": "사랑",
+    "understanding_partners": "파트너",
+    "self_growth": "성장"
   },
   "pages": {
     "about": {

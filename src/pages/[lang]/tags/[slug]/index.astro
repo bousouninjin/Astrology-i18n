@@ -6,7 +6,7 @@ import PostCardCover from '@/cards/PostCardCover.astro';
 import CardWithPriority from '@/features/CardWithPriority.astro';
 import type { Lang } from '@/utils/i18n';
 import { DEFAULT_LANG, SUPPORTED_LANGS } from '@/utils/i18n';
-import { t } from '@/utils/translations';
+import { t, tagLabel } from '@/utils/translations';
 import { NAV_ITEMS } from '@/utils/navItems';
 
 export async function getStaticPaths() {
@@ -27,11 +27,11 @@ const lang = ((Astro.params.lang as Lang) || DEFAULT_LANG) as Lang;
 const slug = String(Astro.params.slug || '');
 
 const posts = await getCollection('post', (p) => !p.data.draft && p.data.locales === (lang as any));
-const translated = String(t(lang as any, `tags.${slug}`)).toLowerCase();
+const translated = String(tagLabel(lang, slug)).toLowerCase();
 const all = posts
   .filter((p) => {
     const tags = (p.data.tags || []).map((x: string) => String(x).toLowerCase());
-    return tags.includes(translated) || tags.includes(String(slug));
+    return tags.includes(translated) || tags.includes(String(slug).toLowerCase());
   })
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 
@@ -55,16 +55,22 @@ const page = {
   },
 };
 
-const h1 = t(lang, `headings.${slug}.h1`) || t(lang, `tags.${slug}`) || slug;
-const h2 = t(lang, `headings.${slug}.h2`);
+const h1Key = `headings.${slug}.h1`;
+const h1Trans = t(lang, h1Key);
+const h1 = h1Trans !== h1Key ? h1Trans : (tagLabel(lang, slug) || slug);
+
+const h2Key = `headings.${slug}.h2`;
+const h2Trans = t(lang, h2Key);
+const h2 = h2Trans !== h2Key ? h2Trans : '';
+
 const title = h1;
-const description = h2;
+const description = h2 || t(lang, 'pages.tags.description');
 ---
 
 <LandingLayout lang={lang} title={title} description={description} canonical={Astro.url.href}>
   <fragment slot="header">
     <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">{h1}</h1>
-    <h2 class="mt-2 text-xl text-neutral-600 dark:text-neutral-300">{h2}</h2>
+    {h2 && <h2 class="mt-2 text-xl text-neutral-600 dark:text-neutral-300">{h2}</h2>}
   </fragment>
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {

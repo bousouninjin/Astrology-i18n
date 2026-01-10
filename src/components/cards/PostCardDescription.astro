@@ -4,7 +4,7 @@ import SkeletonCardDescription from '@/ui/SkeletonCardDescription.astro';
 import Divider from '@/ui/Divider.astro';
 import { formatDate } from '@/utils/date';
 import type { Lang } from '@/utils/i18n';
-import { categoryLabel } from '@/utils/translations';
+import { categoryLabel, tagLabel } from '@/utils/translations';
 
 interface Props {
   href?: string;
@@ -13,7 +13,7 @@ interface Props {
   title: string;
   description?: string;
   date?: string | Date;
-  category?: string;
+  tags?: string[];
   lang?: Lang;
 
   priority?: boolean;
@@ -30,7 +30,7 @@ const {
   title,
   description,
   date,
-  category,
+  tags = [],
   lang = 'zh',
   priority = false,
   aspectClass = 'aspect-video',
@@ -69,7 +69,7 @@ const sizesAttr = isSubheadline ? '(max-width: 768px) 165px, 120px' : '(max-widt
     >
       <div class={contentClass}>
         <h3
-          class="text-base font-semibold leading-snug lg:group-hover:underline underline-offset-2"
+          class="text-[15px] font-sans font-normal leading-[1.15] lg:group-hover:underline underline-offset-2"
           style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;"
         >
           {title}
@@ -82,9 +82,9 @@ const sizesAttr = isSubheadline ? '(max-width: 768px) 165px, 120px' : '(max-widt
             {description}
           </p>
         )}
-        <div class={`${metaClass} flex items-center text-xs text-base-content/80`.trim()}>
-          {category && <span class="text-primary dark:text-secondary">{categoryLabel(lang, category)}</span>}
-          {category && date && <Divider />}
+        <div class={`${metaClass} flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-base-content/80`.trim()}>
+          {tags?.map((tag) => <span class="text-primary dark:text-secondary">#{tagLabel(lang, tag)}</span>)}
+          {tags?.length > 0 && date && <Divider />}
           <span>{date ? formatDate(date, lang) : ''}</span>
         </div>
       </div>

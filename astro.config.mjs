@@ -9,8 +9,8 @@ import { defineConfig } from 'astro/config';
 import { remarkModifiedTime } from './src/utils/remark-modified-time.mjs';
 
 export default defineConfig({
-  site: 'https://astrology-i18n.vercel.app',
-  trailingSlash: 'always',
+  site: 'https://relately-news.asymmetry.life',
+  trailingSlash: 'ignore',
 
   prefetch: {
     defaultStrategy: 'viewport',
@@ -22,7 +22,7 @@ export default defineConfig({
 
   i18n: {
     defaultLocale: 'ja',
-    locales: ['zh', 'en', 'fr', 'es', 'ru', 'ja', 'ko', 'pt', 'de', 'id'],
+    locales: ['ja', 'en', 'zh', 'fr', 'es', 'ru', 'ko', 'pt', 'de', 'id'],
     routing: 'manual',
   },
 
@@ -35,7 +35,6 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkModifiedTime],
   },
-
   integrations: [
     astroExpressiveCode({
       themes: ['github-dark', 'github-light'],
@@ -45,12 +44,12 @@ export default defineConfig({
       i18n: {
         defaultLocale: 'ja',
         locales: {
-          zh: 'zh-CN',
+          ja: 'ja-JP',
           en: 'en-US',
+          zh: 'zh-CN',
           fr: 'fr-FR',
           es: 'es-ES',
           ru: 'ru-RU',
-          ja: 'ja-JP',
           ko: 'ko-KR',
           pt: 'pt-PT',
           de: 'de-DE',

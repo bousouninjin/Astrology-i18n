@@ -2,10 +2,10 @@
   "site": {
     "name": "Astrology",
     "titleTemplate": "%s · Astrology",
-    "description": "Двигаясь вперёд через океан жизни, волны предпринимательства и туман инвестиций",
+    "description": "Расширяйте свои карты любви, преодолевайте конфликты и растите вместе.",
     "twitter": {
       "site": "@idimilabs",
-      "creator": "@Astro"
+      "creator": "@relately"
     }
   },
   "language": {
@@ -26,47 +26,52 @@
     "relatedPosts": "Похожие статьи"
   },
   "categories": {
-    "resolving_conflict": "Resolving Conflict",
-    "deepening_love": "Deepening Love",
-    "understanding_partners": "Understanding Partners",
-    "self_growth": "Self Growth"
+    "resolving_conflict": "Разрешение конфликтов",
+    "deepening_love": "Углубление любви",
+    "understanding_partners": "Понимание партнера",
+    "self_growth": "Саморазвитие"
   },
   "tags": {
-    "repair": "Repair",
-    "danger_signs": "Danger Signs",
-    "daily_habits": "Daily Habits",
-    "mindset": "Mindset",
-    "intimacy": "Intimacy"
+    "repair": "Восстановление",
+    "danger_signs": "Тревожные знаки",
+    "daily_habits": "Ежедневные привычки",
+    "mindset": "Мышление",
+    "intimacy": "Близость",
+    "parenting": "Родительство",
+    "in_laws": "Родственники",
+    "work_life": "Работа и жизнь",
+    "sex_life": "Сексуальная жизнь",
+    "communication": "Общение"
   },
   "headings": {
     "home": {
       "title": "Главная",
-      "h1": "Astrology",
-      "h2": "Двигаясь вперёд через океан жизни, волны предпринимательства и туман инвестиций"
+      "h1": "Relately News",
+      "h2": "Углублять любовь, преодолевать конфликты, расти вместе"
     },
     "resolving_conflict": {
-      "h1": "Resolving Conflict",
-      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
+      "h1": "Разрешение конфликтов",
+      "h2": "Узнайте, как правильно ссориться, восстанавливать отношения и избегать развода"
     },
     "deepening_love": {
-      "h1": "Deepening Love",
-      "h2": "Strengthen your bond through love languages and gratitude"
+      "h1": "Углубление любви",
+      "h2": "Укрепляйте связь с помощью языков любви и благодарности"
     },
     "understanding_partners": {
-      "h1": "Understanding Partners",
-      "h2": "Understand differences and backgrounds to resolve misunderstandings"
+      "h1": "Понимание партнера",
+      "h2": "Поймите различия и подоплеку, чтобы разрешить недопонимания"
     },
     "self_growth": {
-      "h1": "Self Growth",
-      "h2": "Manage emotions and accept yourself"
+      "h1": "Саморазвитие",
+      "h2": "Управляйте эмоциями и примите себя"
     }
   },
   "navigation": {
     "home": "Главная",
-    "resolving_conflict": "Conflict",
-    "deepening_love": "Love",
-    "understanding_partners": "Partners",
-    "self_growth": "Growth"
+    "resolving_conflict": "Конфликты",
+    "deepening_love": "Любовь",
+    "understanding_partners": "Партнер",
+    "self_growth": "Развитие"
   },
   "pages": {
     "about": {

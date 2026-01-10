@@ -1,8 +1,8 @@
 ---
-title: "iNote"
-description: "在生活的海洋，创业的波涛和投资的迷雾中前行"
+title: "Relately"
+description: "Relately 是一款关系改善应用。这将是一个致力于关系改善的新闻网站。"
 locales: zh
 draft: false
 ---
 
-在生活的海洋，创业的波涛和投资的迷雾中前行
+Relately 是一款关系改善应用。这将是一个致力于关系改善的新闻网站。

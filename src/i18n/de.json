@@ -2,10 +2,10 @@
   "site": {
     "name": "Astrology",
     "titleTemplate": "%s · Astrology",
-    "description": "Vorwärts durch den Ozean des Lebens, die Wellen des Unternehmertums und den Nebel der Investitionen",
+    "description": "Erweitern Sie Ihre Liebeskarten, überwinden Sie Konflikte und wachsen Sie gemeinsam.",
     "twitter": {
       "site": "@idimilabs",
-      "creator": "@Astro"
+      "creator": "@relately"
     }
   },
   "language": {
@@ -26,47 +26,52 @@
     "relatedPosts": "Ähnliche Beiträge"
   },
   "categories": {
-    "resolving_conflict": "Resolving Conflict",
-    "deepening_love": "Deepening Love",
-    "understanding_partners": "Understanding Partners",
-    "self_growth": "Self Growth"
+    "resolving_conflict": "Konfliktlösung",
+    "deepening_love": "Liebe vertiefen",
+    "understanding_partners": "Partner verstehen",
+    "self_growth": "Selbstwachstum"
   },
   "tags": {
-    "repair": "Repair",
-    "danger_signs": "Danger Signs",
-    "daily_habits": "Daily Habits",
-    "mindset": "Mindset",
-    "intimacy": "Intimacy"
+    "repair": "Reparatur",
+    "danger_signs": "Warnzeichen",
+    "daily_habits": "Gewohnheiten",
+    "mindset": "Denkweise",
+    "intimacy": "Intimität",
+    "parenting": "Elternschaft",
+    "in_laws": "Schwiegereltern",
+    "work_life": "Arbeitsleben",
+    "sex_life": "Sexleben",
+    "communication": "Kommunikation"
   },
   "headings": {
     "home": {
       "title": "Startseite",
-      "h1": "Astrology",
-      "h2": "Vorwärts durch den Ozean des Lebens, die Wellen des Unternehmertums und den Nebel der Investitionen"
+      "h1": "Relately News",
+      "h2": "Liebe vertiefen, Konflikte überwinden, gemeinsam wachsen"
     },
     "resolving_conflict": {
-      "h1": "Resolving Conflict",
-      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
+      "h1": "Konfliktlösung",
+      "h2": "Lernen Sie richtig zu streiten, Beziehungen zu reparieren und Scheidung zu vermeiden"
     },
     "deepening_love": {
-      "h1": "Deepening Love",
-      "h2": "Strengthen your bond through love languages and gratitude"
+      "h1": "Liebe vertiefen",
+      "h2": "Stärken Sie Ihre Bindung durch Liebessprachen und Dankbarkeit"
     },
     "understanding_partners": {
-      "h1": "Understanding Partners",
-      "h2": "Understand differences and backgrounds to resolve misunderstandings"
+      "h1": "Partner verstehen",
+      "h2": "Unterschiede und Hintergründe verstehen, um Missverständnisse zu klären"
     },
     "self_growth": {
-      "h1": "Self Growth",
-      "h2": "Manage emotions and accept yourself"
+      "h1": "Selbstwachstum",
+      "h2": "Emotionen managen und sich selbst akzeptieren"
     }
   },
   "navigation": {
     "home": "Startseite",
-    "resolving_conflict": "Conflict",
-    "deepening_love": "Love",
-    "understanding_partners": "Partners",
-    "self_growth": "Growth"
+    "resolving_conflict": "Konfliktlösung",
+    "deepening_love": "Liebe tiefen",
+    "understanding_partners": "Partner",
+    "self_growth": "Wachstum"
   },
   "pages": {
     "about": {

@@ -2,10 +2,10 @@
   "site": {
     "name": "Astrology",
     "titleTemplate": "%s · Astrology",
-    "description": "Menyusuri lautan kehidupan, gelombang kewirausahaan, dan kabut investasi",
+    "description": "Perluas peta cinta Anda, atasi konflik, dan tumbuh bersama.",
     "twitter": {
       "site": "@idimilabs",
-      "creator": "@Astro"
+      "creator": "@relately"
     }
   },
   "language": {
@@ -26,47 +26,52 @@
     "relatedPosts": "Artikel Terkait"
   },
   "categories": {
-    "resolving_conflict": "Resolving Conflict",
-    "deepening_love": "Deepening Love",
-    "understanding_partners": "Understanding Partners",
-    "self_growth": "Self Growth"
+    "resolving_conflict": "Resolusi Konflik",
+    "deepening_love": "Memperdalam Cinta",
+    "understanding_partners": "Memahami Pasangan",
+    "self_growth": "Pertumbuhan Diri"
   },
   "tags": {
-    "repair": "Repair",
-    "danger_signs": "Danger Signs",
-    "daily_habits": "Daily Habits",
-    "mindset": "Mindset",
-    "intimacy": "Intimacy"
+    "repair": "Perbaikan",
+    "danger_signs": "Tanda Bahaya",
+    "daily_habits": "Kebiasaan Harian",
+    "mindset": "Pola Pikir",
+    "intimacy": "Keintiman",
+    "parenting": "Parenting",
+    "in_laws": "Mertua",
+    "work_life": "Kehidupan Kerja",
+    "sex_life": "Kehidupan Seksual",
+    "communication": "Komunikasi"
   },
   "headings": {
     "home": {
       "title": "Beranda",
-      "h1": "Astrology",
-      "h2": "Menyusuri lautan kehidupan, gelombang kewirausahaan, dan kabut investasi"
+      "h1": "Relately News",
+      "h2": "Perdalam cinta, atasi konflik, tumbuh bersama"
     },
     "resolving_conflict": {
-      "h1": "Resolving Conflict",
-      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
+      "h1": "Resolusi Konflik",
+      "h2": "Pelajari cara bertengkar yang benar, memperbaiki hubungan, dan menghindari perceraian"
     },
     "deepening_love": {
-      "h1": "Deepening Love",
-      "h2": "Strengthen your bond through love languages and gratitude"
+      "h1": "Memperdalam Cinta",
+      "h2": "Perkuat ikatan Anda melalui bahasa cinta dan rasa syukur"
     },
     "understanding_partners": {
-      "h1": "Understanding Partners",
-      "h2": "Understand differences and backgrounds to resolve misunderstandings"
+      "h1": "Memahami Pasangan",
+      "h2": "Pahami perbedaan dan latar belakang untuk menyelesaikan kesalahpahaman"
     },
     "self_growth": {
-      "h1": "Self Growth",
-      "h2": "Manage emotions and accept yourself"
+      "h1": "Pertumbuhan Diri",
+      "h2": "Kelola emosi dan terima diri sendiri"
     }
   },
   "navigation": {
     "home": "Beranda",
-    "resolving_conflict": "Conflict",
-    "deepening_love": "Love",
-    "understanding_partners": "Partners",
-    "self_growth": "Growth"
+    "resolving_conflict": "Konflik",
+    "deepening_love": "Cinta",
+    "understanding_partners": "Pasangan",
+    "self_growth": "Pertumbuhan"
   },
   "pages": {
     "about": {

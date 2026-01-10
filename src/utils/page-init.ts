@@ -1,17 +1,17 @@
 /**
- * 全局页面初始化管理器
+ * グローバルページ初期化マネージャー
  * 
- * 统一管理 Astro View Transitions 的页面初始化逻辑，
- * 确保在页面加载和导航时正确初始化组件。
+ * Astro View Transitions のページ初期化ロジックを統一管理し、
+ * ページ読み込み時およびナビゲーション時にコンポーネントが正しく初期化されることを保証します。
  * 
  * @example
  * ```typescript
  * import { registerPageInit } from '@/utils/page-init';
  * 
- * // 注册初始化函数
+ * // 初期化関数を登録
  * registerPageInit('themeSwitcher', () => {
  *   const buttons = document.querySelectorAll('[data-theme]');
- *   // ... 初始化逻辑
+ *   // ... 初期化ロジック
  * });
  * ```
  */
@@ -36,36 +36,36 @@ class PageInitManager {
     private setup(): void {
         if (typeof window === 'undefined') return;
 
-        // 首次加载时初始化
+        // 初回読み込み時の初期化
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => this.runAllInits());
         } else {
             this.runAllInits();
         }
 
-        // Astro 视图转换时重新初始化
+        // Astro ビュー遷移時の再初期化
         document.addEventListener('astro:page-load', () => {
             this.runAllInits();
         });
 
-        // 页面切换前清理
+        // ページ切り替え前のクリーンアップ
         document.addEventListener('astro:before-preparation', () => {
             this.runAllCleanups();
         });
     }
 
     /**
-     * 注册页面初始化函数
+     * ページ初期化関数を登録
      * 
-     * @param name - 唯一标识符
-     * @param init - 初始化函数，可选返回清理函数
-     * @param options - 配置选项
+     * @param name - 一意の識別子
+     * @param init - 初期化関数、オプションでクリーンアップ関数を返す
+     * @param options - 設定オプション
      */
     register(
         name: string,
         init: InitFunction,
         options?: {
-            /** 是否立即执行（如果页面已加载） */
+            /** 直ちに実行するかどうか（ページが既に読み込まれている場合） */
             immediate?: boolean;
         }
     ): void {
@@ -77,16 +77,16 @@ class PageInitManager {
 
         this.handlers.set(name, { init });
 
-        // 如果页面已初始化且设置了立即执行，则立即运行
+        // ページが既に初期化されており、かつ即時実行が設定されている場合は、直ちに実行する
         if (this.initialized && options?.immediate) {
             this.runInit(name);
         }
     }
 
     /**
-     * 取消注册初始化函数
+     * 初期化関数の登録解除
      * 
-     * @param name - 要移除的处理器名称
+     * @param name - 削除するハンドラ名
      */
     unregister(name: string): void {
         const cleanup = this.cleanupFunctions.get(name);
@@ -102,17 +102,17 @@ class PageInitManager {
         if (!handler) return;
 
         try {
-            // 先清理之前的实例（如果有）
+            // 以前のインスタンスがあれば先にクリーンアップする
             const existingCleanup = this.cleanupFunctions.get(name);
             if (existingCleanup) {
                 existingCleanup();
                 this.cleanupFunctions.delete(name);
             }
 
-            // 执行初始化
+            // 初期化を実行
             const result = handler.init();
 
-            // 如果返回了清理函数，保存起来
+            // クリーンアップ関数が返された場合は保存する
             if (typeof result === 'function') {
                 this.cleanupFunctions.set(name, result);
             }
@@ -140,42 +140,42 @@ class PageInitManager {
     }
 
     /**
-     * 获取所有已注册的处理器名称
+     * 登録されているすべてのハンドラ名を取得
      */
     getRegisteredHandlers(): string[] {
         return Array.from(this.handlers.keys());
     }
 }
 
-// 创建全局单例
+// グローバルシングルトンを作成
 const pageInitManager = new PageInitManager();
 
 /**
- * 注册页面初始化函数
+ * ページ初期化関数の登録
  * 
- * 该函数会在以下时机执行：
- * 1. 页面首次加载完成时（DOMContentLoaded）
- * 2. Astro 视图转换后（astro:page-load）
+ * この関数は以下のタイミングで実行されます：
+ * 1. ページの初回読み込み完了時（DOMContentLoaded）
+ * 2. Astro ビュー遷移後（astro:page-load）
  * 
- * @param name - 唯一标识符，用于管理和调试
- * @param init - 初始化函数，可选返回清理函数
- * @param options - 配置选项
+ * @param name - 管理およびデバッグ用の一意の識別子
+ * @param init - 初期化関数、オプションでクリーンアップ関数を返す
+ * @param options - 設定オプション
  * 
  * @example
  * ```typescript
- * // 基本用法
+ * // 基本的な使用法
  * registerPageInit('myComponent', () => {
  *   const element = document.querySelector('#my-element');
  *   element?.addEventListener('click', handleClick);
  * });
  * 
- * // 带清理函数
+ * // クリーンアップ関数付き
  * registerPageInit('myComponent', () => {
  *   const element = document.querySelector('#my-element');
  *   const handler = () => console.log('clicked');
  *   element?.addEventListener('click', handler);
  *   
- *   // 返回清理函数
+ *   // クリーンアップ関数を返す
  *   return () => {
  *     element?.removeEventListener('click', handler);
  *   };
@@ -191,20 +191,20 @@ export function registerPageInit(
 }
 
 /**
- * 取消注册页面初始化函数
+ * ページ初期化関数の登録解除
  * 
- * @param name - 要移除的处理器名称
+ * @param name - 削除するハンドラ名
  */
 export function unregisterPageInit(name: string): void {
     pageInitManager.unregister(name);
 }
 
 /**
- * 获取所有已注册的初始化处理器名称
+ * 登録されているすべての初期化ハンドラ名を取得
  */
 export function getRegisteredInits(): string[] {
     return pageInitManager.getRegisteredHandlers();
 }
 
-// 导出类型供外部使用
+// 外部で使用するために型をエクスポート
 export type { InitFunction, CleanupFunction };

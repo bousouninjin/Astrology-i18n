@@ -2,10 +2,10 @@
   "site": {
     "name": "Astrology",
     "titleTemplate": "%s · Astrology",
-    "description": "Avanzando en el océano de la vida, las olas del emprenAstroento y la niebla de la inversión",
+    "description": "Amplíe sus mapas de amor, supere conflictos y crezca juntos.",
     "twitter": {
       "site": "@idimilabs",
-      "creator": "@Astro"
+      "creator": "@relately"
     }
   },
   "language": {
@@ -26,47 +26,52 @@
     "relatedPosts": "Artículos relacionados"
   },
   "categories": {
-    "resolving_conflict": "Resolving Conflict",
-    "deepening_love": "Deepening Love",
-    "understanding_partners": "Understanding Partners",
-    "self_growth": "Self Growth"
+    "resolving_conflict": "Resolución de conflictos",
+    "deepening_love": "Profundizar el amor",
+    "understanding_partners": "Entender a la pareja",
+    "self_growth": "Crecimiento personal"
   },
   "tags": {
-    "repair": "Repair",
-    "danger_signs": "Danger Signs",
-    "daily_habits": "Daily Habits",
-    "mindset": "Mindset",
-    "intimacy": "Intimacy"
+    "repair": "Reparación",
+    "danger_signs": "Señales de peligro",
+    "daily_habits": "Hábitos diarios",
+    "mindset": "Mentalidad",
+    "intimacy": "Intimidad",
+    "parenting": "Crianza",
+    "in_laws": "Suegros",
+    "work_life": "Vida laboral",
+    "sex_life": "Vida sexual",
+    "communication": "Comunicación"
   },
   "headings": {
     "home": {
       "title": "Inicio",
-      "h1": "Astrology",
-      "h2": "Avanzando en la vida, el emprenAstroento y la niebla de la inversión"
+      "h1": "Relately News",
+      "h2": "Profundizar el amor, superar conflictos, crecer juntos"
     },
     "resolving_conflict": {
-      "h1": "Resolving Conflict",
-      "h2": "Learn how to fight right, repair relationships, and avoid divorce"
+      "h1": "Resolución de conflictos",
+      "h2": "Aprenda a pelear bien, reparar relaciones y evitar el divorcio"
     },
     "deepening_love": {
-      "h1": "Deepening Love",
-      "h2": "Strengthen your bond through love languages and gratitude"
+      "h1": "Profundizar el amor",
+      "h2": "Fortalezca su vínculo a través de los lenguajes del amor y la gratitud"
     },
     "understanding_partners": {
-      "h1": "Understanding Partners",
-      "h2": "Understand differences and backgrounds to resolve misunderstandings"
+      "h1": "Entender a la pareja",
+      "h2": "Comprender las diferencias y los antecedentes para resolver malentendidos"
     },
     "self_growth": {
-      "h1": "Self Growth",
-      "h2": "Manage emotions and accept yourself"
+      "h1": "Crecimiento personal",
+      "h2": "Manejar las emociones y aceptarse a sí mismo"
     }
   },
   "navigation": {
     "home": "Inicio",
-    "resolving_conflict": "Conflict",
-    "deepening_love": "Love",
-    "understanding_partners": "Partners",
-    "self_growth": "Growth"
+    "resolving_conflict": "Conflictos",
+    "deepening_love": "Amor",
+    "understanding_partners": "Pareja",
+    "self_growth": "Crecimiento"
   },
   "pages": {
     "about": {

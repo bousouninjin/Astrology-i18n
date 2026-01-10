@@ -2,10 +2,10 @@
   "site": {
     "name": "Astrology",
     "titleTemplate": "%s · Astrology",
-    "description": "Navigating life, entrepreneurship, and the fog of investing",
+    "description": "Expand your love maps, overcome conflict, and grow together.",
     "twitter": {
       "site": "@idimilabs",
-      "creator": "@Astro"
+      "creator": "@relately"
     }
   },
   "language": {
@@ -36,13 +36,18 @@
     "danger_signs": "Danger Signs",
     "daily_habits": "Daily Habits",
     "mindset": "Mindset",
-    "intimacy": "Intimacy"
+    "intimacy": "Intimacy",
+    "parenting": "Parenting",
+    "in_laws": "In-laws",
+    "work_life": "Work & Life",
+    "sex_life": "Sex Life",
+    "communication": "Communication"
   },
   "headings": {
     "home": {
       "title": "Home",
-      "h1": "Astrology",
-      "h2": "Navigating life, entrepreneurship, and the fog of investing"
+      "h1": "Relately News",
+      "h2": "Deepen love, overcome conflict, grow together"
     },
     "resolving_conflict": {
       "h1": "Resolving Conflict",

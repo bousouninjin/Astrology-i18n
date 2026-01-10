@@ -1,8 +1,8 @@
 ---
-title: "iNote"
-description: "在生活的海洋，创业的波涛和投资的迷雾中前行"
+title: "Relately"
+description: "Relately is a relationship improvement app. This will be a news website for relationship improvement."
 locales: en
 draft: false
 ---
 
-在生活的海洋，创业的波涛和投资的迷雾中前行，oK
+Relately is a relationship improvement app. This will be a news website for relationship improvement.
