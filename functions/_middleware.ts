@@ -10,14 +10,12 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     // 必要に応じて変更してください
     const PROTECTED_PATH = '/protected/';
 
+    // 全ページに対してGoogle等のインデックスを拒否するヘッダーを追加
+    // これにより、検索結果に表示されなくなります
+    const response = await next();
+    response.headers.set('X-Robots-Tag', 'noindex');
+
     if (url.pathname.startsWith(PROTECTED_PATH)) {
-        // レスポンスを取得
-        const response = await next();
-
-        // Google等のインデックスを拒否するヘッダーを追加
-        // これにより、検索結果に表示されなくなります
-        response.headers.set('X-Robots-Tag', 'noindex');
-
         // トークン検証
         const authHeader = request.headers.get('Authorization');
         const appTokenHeader = request.headers.get('x-app-token');
@@ -31,10 +29,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         if (token !== env.APP_SECRET_TOKEN) {
             return new Response('Unauthorized', { status: 401 });
         }
-
-        return response;
     }
 
-    // 保護対象外のパスはそのまま通過＆インデックス拒否ヘッダーは付けない（必要なら付けることも可能）
-    return next();
+    return response;
 };
