@@ -43,6 +43,11 @@ const moreItems = items.slice(11);
 
 const authors = await getCollection('author', (a) => !a.data.draft && a.data.locales === (lang as any));
 const authorItems = authors.slice(0, 6) as Author[];
+const toAuthorUrl = (author: Author) => {
+  const idWithoutExt = author.id.replace(/\.(md|mdx|markdown)$/i, '');
+  const slug = idWithoutExt.replace(new RegExp(`^${lang}/`), '');
+  return getRelativeLocaleUrl(lang, `/author/${slug}/`);
+};
 
 const total = all.length;
 const lastPage = Math.max(1, Math.ceil(total / PAGE_SIZE));
@@ -207,7 +212,7 @@ const authorTitle = t(lang, 'pages.author.title');
                 />
                 <div class="mt-2 flex flex-col gap-0.5">
                   <h3 class="text-base font-semibold group-hover:underline">
-                    <a href={getRelativeLocaleUrl(lang, '/author')}>
+                    <a href={toAuthorUrl(author)}>
                       <span class="absolute inset-0 z-10 pointer-events-none"></span>
                       {author.data.name}
                     </a>

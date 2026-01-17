@@ -47,7 +47,24 @@ const modifiedTime = (remarkPluginFrontmatter as any)?.lastModified || entry.dat
 const author = entry.data.author;
 const section = entry.data.category;
 const tags = entry.data.tags as string[] | undefined;
-const authorUrl = toAbsolute(lang, '/author/');
+const authors = await getCollection('author', (a) => !a.data.draft && a.data.locales === (lang as any));
+const normalize = (value: string) => value.trim().toLowerCase().replace(/\s+/g, '-');
+const authorKey = normalize(String(author || ''));
+const authorMatch = authors.find((a) => {
+  const idWithoutExt = a.id.replace(/\.(md|mdx|markdown)$/i, '');
+  const slugWithoutLang = idWithoutExt.replace(new RegExp(`^${lang}/`), '');
+  return (
+    slugWithoutLang.toLowerCase() === authorKey ||
+    normalize(a.data.name || '') === authorKey ||
+    String(a.data.name || '').toLowerCase() === authorKey
+  );
+});
+const authorSlug = authorMatch
+  ? authorMatch.id.replace(/\.(md|mdx|markdown)$/i, '').replace(new RegExp(`^${lang}/`), '')
+  : '';
+const authorUrl = authorSlug
+  ? toAbsolute(lang, `/author/${authorSlug}/`)
+  : toAbsolute(lang, '/author/');
 const heroImage = entry.data.heroImage;
 const heroImageAlt = entry.data.heroImageAlt;
 const postLayoutProps = {

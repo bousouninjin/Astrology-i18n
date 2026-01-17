@@ -134,7 +134,7 @@ const headerProps = {
         <div class="flex w-full flex-wrap items-center justify-between gap-3">
           {author ? (
             <a
-              href={getRelativeLocaleUrl(resolvedLang, '/author/')}
+              href={authorUrl || getRelativeLocaleUrl(resolvedLang, '/author/')}
               class="flex items-center gap-2 text-sm text-neutral-600 no-underline transition-opacity hover:opacity-80 dark:text-neutral-300"
             >
               <Image src={authorAvatar} alt={author} width={32} height={32} class="rounded-full" />
