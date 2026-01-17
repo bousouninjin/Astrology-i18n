@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/funny-maltipoo-puppy-is-resting-in-a-modern-interior.jpg"
 heroImageAlt: "室内でくつろぐマルチプー"
 locales: ja
+draft: true
 ---
 
 # 17-3 対立解決5ステップ⑤：根深いしこりを解消する「感情的な傷の癒し方」

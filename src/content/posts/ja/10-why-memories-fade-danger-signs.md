@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/woman-feeling-sad-at-window-lonely-broken-heart-woman-unhappy-feel-sick-sad-girl-girl-feel-sad.jpg"
 heroImageAlt: "窓際でうつむく女性"
 locales: ja
+draft: true
+
 ---
 
 # 10 なぜ二人の思い出は色褪せたのか？「悪い思い出」が示す危険なサイン

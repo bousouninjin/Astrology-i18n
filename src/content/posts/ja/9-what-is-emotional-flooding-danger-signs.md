@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/view-of-heart-shape-drawn-in-beach-sand.jpg"
 heroImageAlt: "波に消えそうな砂のハート"
 locales: ja
+draft: true
+
 ---
 
 # 9 心が溺れる「洪水状態」とは？議論がヒートアップしたときの身体の危険信号

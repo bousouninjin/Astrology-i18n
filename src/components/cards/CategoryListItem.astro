@@ -1,0 +1,82 @@
+---
+import OptimizedPicture from '@/features/OptimizedPicture.astro';
+import Divider from '@/ui/Divider.astro';
+import { formatRelative, toISO } from '@/utils/date';
+import type { Lang } from '@/utils/i18n';
+import { categoryLabel } from '@/utils/translations';
+
+interface Props {
+  href: string;
+  imageSrc: any;
+  imageAlt?: string;
+  title: string;
+  description?: string;
+  date?: string | Date;
+  category?: string;
+  metaLabel?: string;
+  lang?: Lang;
+  priority?: boolean;
+  isLast?: boolean;
+}
+
+const {
+  href,
+  imageSrc,
+  imageAlt,
+  title,
+  description,
+  date,
+  category,
+  metaLabel,
+  lang = 'zh',
+  priority = false,
+  isLast = false,
+} = Astro.props as Props;
+
+const relativeDate = date ? formatRelative(date, lang) : '';
+const isoDate = toISO(date);
+const categoryText = categoryLabel(lang, category);
+const metaText = metaLabel ?? categoryText;
+const borderClass = isLast ? 'border-b-0' : 'border-b border-base-300';
+---
+
+<li class="group w-full max-w-md mx-auto lg:max-w-full relative isolate flex flex-col lg:flex-row gap-4">
+  <div class="flex-shrink-0 aspect-square w-32 text-sm text-base-content/60 text-pretty capitalize hidden lg:flex pt-1">
+    {relativeDate}
+  </div>
+  <div class={`flex-1 flex flex-col gap-4 lg:flex-row-reverse pb-2 lg:pb-4 ${borderClass}`}>
+    <div class="w-full lg:w-60 aspect-video">
+      <OptimizedPicture
+        src={imageSrc}
+        alt={imageAlt || title}
+        class="aspect-video rounded w-full h-full object-cover"
+        fit="cover"
+        position="center"
+        priority={priority}
+        sizes="(max-width: 1024px) 100vw, 240px"
+      />
+    </div>
+    <div class="flex-1 space-y-2">
+      <h3 class="text-xl font-semibold lg:group-hover:underline">
+        <a href={href}>
+          <span class="absolute inset-0 z-10"></span>
+          {title}
+        </a>
+      </h3>
+      {description && <p class="text-base-content/80 max-w-xl text-pretty">{description}</p>}
+    </div>
+    <div class="text-sm lg:hidden flex items-center text-base-content/70 pt-2">
+      {relativeDate && (
+        <time class="flex items-center gap-1" datetime={isoDate}>
+          <span>{relativeDate}</span>
+        </time>
+      )}
+      {relativeDate && metaText ? <Divider /> : null}
+      {metaText && (
+        <small class="flex items-center gap-1">
+          <span class="capitalize text-sm">{metaText}</span>
+        </small>
+      )}
+    </div>
+  </div>
+</li>

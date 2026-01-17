@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/mad-woman-showing-finger-without-ring-having-argument-about-wedding.jpg"
 heroImageAlt: "強く指摘する女性"
 locales: ja
+draft: true
+
 ---
 
 # 5 離婚は96%予測可能？夫婦の会話に潜む最初の危険サイン「きつい会話の切り出し」

@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/view-of-heart-shape-drawn-in-beach-sand.jpg"
 heroImageAlt: "柔らかい砂に描いたハート"
 locales: ja
+draft: true
 ---
 
 # 25 より良い夫婦関係を築くための最後の秘訣：「自分自身を許すこと」

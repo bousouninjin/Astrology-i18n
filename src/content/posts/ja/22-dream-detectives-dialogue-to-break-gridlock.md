@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/magnifying-loupe-and-a-sticker-with-the-word-work-on-a-blue-background.jpg"
 heroImageAlt: "虫眼鏡越しに文字を見る様子"
 locales: ja
+draft: true
 ---
 
 # 22 実践！行き詰まりを解消する「夢探偵」になるための対話法

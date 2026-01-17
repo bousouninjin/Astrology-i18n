@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/view-of-heart-shapes-on-building-wall.jpg"
 heroImageAlt: "並んで描かれた壁のハート"
 locales: ja
+draft: true
 ---
 
 # 17-2 対立解決5ステップ④：Win-Winを目指す最強の武器「二つの円」による妥協術

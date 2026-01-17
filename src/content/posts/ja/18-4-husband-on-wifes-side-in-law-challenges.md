@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/minimalistic-friendship-vibes-3d-paper-cut-craft-illustration-perfect-for-print-and-website.jpg"
 heroImageAlt: "つながりを表す紙の人形"
 locales: ja
+draft: true
 ---
 
 # 18-4 「夫は妻の味方」が鉄則！義理の家族問題から夫婦の絆を守る方法

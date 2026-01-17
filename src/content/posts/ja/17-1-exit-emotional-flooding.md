@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/summer-drink-wallpaper.jpg"
 heroImageAlt: "冷たいドリンクで一息つく場面"
 locales: ja
+draft: true
+
 ---
 
 # 17-1 対立解決5ステップ③：頭が真っ白になる「洪水状態」からの脱出法

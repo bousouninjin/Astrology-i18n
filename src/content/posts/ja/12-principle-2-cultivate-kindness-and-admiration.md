@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/view-of-heart-shaped-sweet-lollipop.jpg"
 heroImageAlt: "ハート型キャンディ"
 locales: ja
+draft: true
+
 ---
 
 # 12 原則2「優しさと称賛を育む」- 侮辱を打ち消す最強の解毒剤

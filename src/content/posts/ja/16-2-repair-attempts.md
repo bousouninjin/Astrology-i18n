@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/view-of-heart-shaped-cookies-or-biscuits (1).jpg"
 heroImageAlt: "アイシングされたハートクッキー"
 locales: ja
+draft: true
+
 ---
 
 # 16-2 対立解決5ステップ②：炎上を止める緊急ブレーキ「修復の試み」

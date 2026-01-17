@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/view-of-heart-shape-made-from-puzzle-pieces.jpg"
 heroImageAlt: "組み合わせを考えるハートパズル"
 locales: ja
+draft: true
+
 ---
 
 # 15 夫婦喧嘩の2つのタイプ：「解決可能な問題」と「永続的な問題」の見分け方

@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/magnifying-loupe-and-a-sticker-with-the-word-work-on-a-blue-background.jpg"
 heroImageAlt: "虫眼鏡とWORKの付箋"
 locales: ja
+draft: true
+
 ---
 
 # 6 関係を蝕む四騎士①：「批判」- あなたの不満はただの文句になっていませんか？

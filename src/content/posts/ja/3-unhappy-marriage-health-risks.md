@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/view-of-heart-shape-drawn-in-beach-sand.jpg"
 heroImageAlt: "砂浜のハート"
 locales: ja
+draft: true
+
 ---
 
 # 3 不幸な結婚は病気のリスクを高める？心身の健康と夫婦関係の驚くべきつながり

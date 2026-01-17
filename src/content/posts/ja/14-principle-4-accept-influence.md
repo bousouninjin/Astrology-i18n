@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/young-millennial-couple-embracing-at-home-happy-about-first-pregnancy.jpg"
 heroImageAlt: "寄り添う若いカップル"
 locales: ja
+draft: true
+
 ---
 
 # 14 原則4「パートナーの影響を受け入れる」- 幸福な結婚の81%を決定づける男性の役割

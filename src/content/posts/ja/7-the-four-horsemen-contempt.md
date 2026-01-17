@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/woman-feeling-sad-at-window-lonely-broken-heart-woman-unhappy-feel-sick-sad-girl-girl-feel-sad.jpg"
 heroImageAlt: "窓辺で落ち込む女性"
 locales: ja
+draft: true
+
 ---
 
 # 7 関係を蝕む四騎士②：「侮辱」- 夫婦関係における最も有害な毒

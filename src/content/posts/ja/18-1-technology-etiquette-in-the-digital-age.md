@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/tom-parsons-Wk_dND94i2A-unsplash.jpg"
 heroImageAlt: "ノートPCを操作する人"
 locales: ja
+draft: true
 ---
 
 # 18-1 スマホが夫婦を分断する？デジタル時代の「テクノロジー・エチケット」

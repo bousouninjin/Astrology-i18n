@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/hands-of-son-and-father.jpg"
 heroImageAlt: "手を取り合う親子の手"
 locales: ja
+draft: true
+
 ---
 
 # 13 原則3「背を向けず、向き合う」- 日常の小さなやり取りが愛情を育む

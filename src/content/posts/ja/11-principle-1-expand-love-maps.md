@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/minimalistic-friendship-vibes-3d-paper-cut-craft-illustration-perfect-for-print-and-website.jpg"
 heroImageAlt: "つながりを示す紙の人形"
 locales: ja
+draft: true
+
 ---
 
 # 11 原則1「愛情マップを広げる」- パートナーの世界を知ることが全ての始まり

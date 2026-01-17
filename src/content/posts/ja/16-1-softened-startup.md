@@ -7,6 +7,8 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/very-good-happy-and-satisfied-young-woman-showing-thumbsup-smiling-positive-approve-and-like-excelle.jpg"
 heroImageAlt: "親指を立てて笑顔を向ける女性"
 locales: ja
+draft: true
+
 ---
 
 # 16-1 対立解決5ステップ①：議論の96%を決める「穏やかな始め方」の技術

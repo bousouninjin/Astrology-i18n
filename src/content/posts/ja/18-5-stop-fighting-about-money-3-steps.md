@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/money-mindset-magic-spreading-positivity-in-finance.jpg"
 heroImageAlt: "紙幣を手に笑う女性"
 locales: ja
+draft: true
 ---
 
 # 18-5 もうお金で喧嘩しない！夫婦で実践する家計管理と将来設計の3ステップ

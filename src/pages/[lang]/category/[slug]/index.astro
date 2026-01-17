@@ -2,11 +2,10 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import LandingLayout from '@/layouts/LandingLayout.astro';
 import Pagination from '@/features/Pagination.astro';
-import PostCardCover from '@/cards/PostCardCover.astro';
-import CardWithPriority from '@/features/CardWithPriority.astro';
+import CategoryListItem from '@/cards/CategoryListItem.astro';
 import type { Lang } from '@/utils/i18n';
 import { DEFAULT_LANG, SUPPORTED_LANGS } from '@/utils/i18n';
-import { t } from '@/utils/translations';
+import { t, categoryLabel } from '@/utils/translations';
 import { NAV_ITEMS } from '@/utils/navItems';
 
 export async function getStaticPaths() {
@@ -61,32 +60,39 @@ const h1 = t(lang, `headings.${slug}.h1`) || t(lang, `navigation.${slug}`) || sl
 const h2 = t(lang, `headings.${slug}.h2`);
 const title = h1;
 const description = h2;
+const heading = categoryLabel(lang, slug) || h1 || slug;
 ---
 
-<LandingLayout lang={lang} title={title} description={description} canonical={Astro.url.href}>
-  <fragment slot="header">
-    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">{h1}</h1>
-    <h2 class="mt-2 text-xl text-neutral-600 dark:text-neutral-300">{h2}</h2>
-  </fragment>
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    {
-      items.map((p, idx) => (
-        <CardWithPriority
-          component={PostCardCover}
-          index={idx}
-          props={{
-            href: toUrl(p, lang),
-            imageSrc: p.data.heroImage,
-            imageAlt: p.data.heroImageAlt,
-            title: p.data.title,
-            date: p.data.pubDate,
-            category: p.data.category,
-            lang,
-          }}
-        />
-      ))
-    }
+<LandingLayout
+  lang={lang}
+  title={title}
+  description={description}
+  canonical={Astro.url.href}
+  showHeader={false}
+  mainClass="flex flex-col h-full pb-8 pt-4"
+>
+  <div class="flex flex-col h-full" data-pagefind-ignore="all">
+    <section class="flex items-center border-b-2 border-primary/10 p-1 mb-4">
+      <h1 class="text-xl font-bold capitalize">{heading}</h1>
+    </section>
+    <ul class="flex flex-col gap-2 flex-1">
+      {
+        items.map((p, idx) => (
+          <CategoryListItem
+            href={toUrl(p, lang)}
+            imageSrc={p.data.heroImage}
+            imageAlt={p.data.heroImageAlt}
+            title={p.data.title}
+            description={p.data.description}
+            date={p.data.pubDate}
+            category={p.data.category}
+            lang={lang}
+            priority={idx === 0}
+            isLast={idx === items.length - 1}
+          />
+        ))
+      }
+    </ul>
+    <Pagination page={page} class="mt-8" />
   </div>
-
-  <Pagination page={page} class="mt-10" />
 </LandingLayout>

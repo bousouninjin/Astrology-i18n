@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/minimalistic-friendship-vibes-3d-paper-cut-craft-illustration-perfect-for-print-and-website.jpg"
 heroImageAlt: "協力を表す紙の人形"
 locales: ja
+draft: true
 ---
 
 # 23 夫婦というチームの文化を育む：原則7「共通の意義を創造する」

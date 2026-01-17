@@ -7,6 +7,7 @@ pubDate: 2026-01-05
 heroImage: "/images/articles/summer-drink-wallpaper.jpg"
 heroImageAlt: "リラックスできる冷たい飲み物"
 locales: ja
+draft: true
 ---
 
 # 18-3 家庭を安らぎの場に！仕事のストレスを持ち帰らないための「ストレス軽減会話」
